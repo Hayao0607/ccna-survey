@@ -15,13 +15,18 @@
         <h1 id="title">出題アンケート</h1>
         <div class="current-theme" id="current-theme"></div>
       </div>
-      <dl class="legend" id="legend"></dl>
       <button type="button" id="menu-button" class="menu-button" aria-label="テーマ一覧を開く" aria-expanded="false" aria-controls="theme-menu">≡</button>
     </div>
-    <p class="keyhint" id="keyhint"></p>
   </header>
 
   <main>
+    <!-- 判定の意味とキー操作の案内（最初の画面に1回だけ） -->
+    <section class="panel intro" id="intro-panel">
+      <h2>判定のしかた</h2>
+      <dl class="legend" id="legend"></dl>
+      <p class="keyhint" id="keyhint"></p>
+    </section>
+
     <section class="panel" id="respondent-panel">
       <h2>回答者情報</h2>
       <form id="respondent-form" autocomplete="on">
@@ -49,10 +54,9 @@
     <section id="theme-view" aria-live="polite"></section>
   </main>
 
-  <!-- 進み具合と提出（画面下に固定） -->
+  <!-- 途中保存と提出（画面下に固定）。進み具合は ≡ メニューで見る -->
   <footer class="savebar" id="savebar">
     <div class="savebar-row">
-      <div class="savebar-status" id="save-summary"></div>
       <div class="savebar-actions">
         <span id="save-buttons"></span>
       </div>

@@ -45,7 +45,7 @@
   // キー操作の案内（PCだけ表示）
   Render.keyhint = function (container, config) {
     var keys = config.judgments.map(function (j, i) { return (i + 1) + "＝" + j.label; }).join("、");
-    container.textContent = "キー操作：" + keys + "（押すと次の問題へ）／ ↑↓ で問題を移動";
+    container.textContent = "パソコンではキーボードでも判定できます：" + keys + "（押すと次の問題へ）／ ↑↓ で問題を移動";
   };
 
   Render.status = function (container, state, config) {

@@ -5,6 +5,8 @@ window.SURVEY_CONFIG = {
  "title": "CCNA 200-301 出題アンケート",
  "questions_version": "2026-10-08",
  "storage_key": "survey:ccna-200-301",
+ "variant": null,
+ "scope_books": [],
  "judgments": [
   {
    "value": "seen",

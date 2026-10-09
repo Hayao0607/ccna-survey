@@ -141,7 +141,6 @@
     R.themeMenu(document.getElementById("menu-list"), config, state, byTheme, currentTheme, function (id) { closeMenu(); selectTheme(id, true); });
     var idx = config.themes.map(function (t) { return t.id; }).indexOf(currentTheme);
     document.getElementById("current-theme").textContent = "表示中：" + (idx + 1) + ". " + config.themes[idx].name;
-    R.status(document.getElementById("save-summary"), state, config);
     renderSubmit();
   }
 
@@ -188,8 +187,7 @@
   }
 
   // ---------- 保存・やり直し ----------
-  // 提出ボタン：全テーマを確認済みにし、事前アンケートの必須項目もそろったら目立つ「回答を提出する」ボタン。
-  // それまでは残っていること（あと○テーマ／事前アンケートが未入力）と、目立たない「途中までの回答を保存する」リンク
+  // 下の固定表示：「途中までの回答を保存する」。全テーマを確認済みにしたときだけ「回答を提出する」ボタンも出す
   function renderSubmit() {
     var box = document.getElementById("save-buttons");
     if (!adaptersReady) return;
@@ -201,9 +199,7 @@
     }
     // 既定のアダプタを先頭に
     adapters.sort(function (a, b) { return (b.id === config.default_adapter) - (a.id === config.default_adapter); });
-    var remaining = config.themes.length - state.data.themes_completed.length;
-    var profileLeft = state.profileProblems();
-    if (remaining === 0 && profileLeft.length === 0) {
+    if (state.data.themes_completed.length === config.themes.length) {
       adapters.forEach(function (ad, i) {
         box.appendChild(R.el("button", {
           type: "button", className: i === 0 ? "primary submit" : "",
@@ -211,25 +207,9 @@
           onclick: function () { submit(ad, false); }
         }));
       });
-      return;
     }
-    var left = [];
-    if (remaining > 0) left.push("あと " + remaining + " テーマ");
-    if (profileLeft.length) left.push("事前アンケートが未入力（" + profileLeft.length + " 項目）");
     box.appendChild(R.el("button", {
-      type: "button", className: "remaining", title: profileLeft.length ? "未入力：" + profileLeft.join("／") : "",
-      text: "提出まで：" + left.join("／"),
-      onclick: function () {
-        // 押すと残っているところへ移動する（事前アンケートを優先）
-        if (profileLeft.length) document.getElementById("profile-panel").scrollIntoView({ behavior: "smooth" });
-        else {
-          var next = config.themes.filter(function (t) { return !state.isThemeDone(t.id); })[0];
-          if (next) selectTheme(next.id, true);
-        }
-      }
-    }));
-    box.appendChild(R.el("button", {
-      type: "button", className: "linklike", title: "今の回答をファイルに保存します（あとで読み込んで続きを回答できます）",
+      type: "button", className: "linklike", title: "今の回答をファイルに保存します（あとで ≡ メニューから読み込んで続きを回答できます）",
       text: "途中までの回答を保存する", onclick: function () { submit(adapters[0], true); }
     }));
   }
@@ -243,9 +223,11 @@
       return;
     }
     if (!partial) {
+      // 事前アンケートの必須項目がそろっていなければ提出しない（入力欄へ移動して知らせる）
       var pp = state.profileProblems();
-      if (pp.length && !window.confirm("事前アンケートに未入力・確認が必要な項目があります。\n\n・" + pp.join("\n・") +
-          "\n\nこのまま提出しますか？（「キャンセル」で入力に戻ります）")) {
+      if (pp.length) {
+        window.alert("事前アンケートに未入力・確認が必要な項目があります。入力してから提出してください。\n\n・" + pp.join("\n・"));
+        setMessage("事前アンケートに未入力の項目があります（" + pp.length + " 項目）。", true);
         document.getElementById("profile-panel").scrollIntoView({ behavior: "smooth" });
         return;
       }

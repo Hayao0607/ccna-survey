@@ -19,7 +19,7 @@
   --dnd-item: #e9edf3;
   --slot-line: #7b8496;     /* ドラッグ＆ドロップの空の枠の点線 */
   --radius: 8px;
-  --bar-h: 64px;
+  --bar-h: 52px;
 }
 @media (prefers-color-scheme: dark) {
   :root {
@@ -61,7 +61,6 @@ button { font: inherit; color: inherit; cursor: pointer; }
 @media (max-width: 899px) {
   .titles { flex: 1 1 0; }
   .menu-button { order: 2; }
-  .legend { order: 3; flex-basis: 100%; }
 }
 .current-theme { font-size: .74rem; color: var(--accent); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 
@@ -98,7 +97,9 @@ button { font: inherit; color: inherit; cursor: pointer; }
 .legend .jk-0 dt { color: var(--seen); background: var(--seen-bg); }
 .legend .jk-1 dt { color: var(--similar); background: var(--similar-bg); }
 .legend .jk-default dt { color: var(--neutral); border: 1px solid var(--line); }
-.keyhint { max-width: 1100px; margin: 2px auto 0; font-size: .72rem; color: var(--muted); display: none; }
+.keyhint { margin: 8px 0 0; font-size: .78rem; color: var(--muted); display: none; }
+.intro .legend { display: grid; gap: 6px; font-size: .9rem; }
+.intro .legend-item { gap: 10px; }
 @media (hover: hover) and (pointer: fine) { .keyhint { display: block; } }
 
 /* 回答者情報 */
@@ -221,10 +222,10 @@ button.subtle { font-size: .75rem; color: var(--muted); background: none; border
 .lightbox.fit .lightbox-body img { max-width: 100%; height: auto; }
 
 @media (max-width: 600px) {
-  :root { --bar-h: 76px; }
+  :root { --bar-h: 52px; }
   main { padding: 6px 10px 20px; }
   #respondent-form { grid-template-columns: 1fr; }
-  .legend { font-size: .72rem; gap: 0 10px; line-height: 1.45; }
+  .intro .legend { font-size: .86rem; }
   .dnd { grid-template-columns: 1fr; }
   .figure img { max-height: 150px; }
   .judge { min-height: 44px; }

@@ -208,6 +208,8 @@
       profile: JSON.parse(JSON.stringify(this.data.profile || {})),
       submitted_at: localIsoString(new Date()),
       status: partial ? "partial" : "submitted",
+      survey_variant: this.config.variant || null,          // 版（全冊版は null、①版は "b1" など）
+      scope_books: (this.config.scope_books || []).slice(), // 版が対象にした冊（空なら全冊）。集計はこの範囲の問題だけを回答済みとみなす
       themes_completed: this.data.themes_completed.slice(),
       answers: answers
     };
