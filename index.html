@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>出題アンケート</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- 画面の骨組み。中身は js/app.js と js/render.js が data/*.js（ビルドで生成）から組み立てる -->
+  <header class="topbar">
+    <div class="topbar-row">
+      <div class="titles">
+        <h1 id="title">出題アンケート</h1>
+        <div class="current-theme" id="current-theme"></div>
+      </div>
+      <dl class="legend" id="legend"></dl>
+      <button type="button" id="menu-button" class="menu-button" aria-label="テーマ一覧を開く" aria-expanded="false" aria-controls="theme-menu">≡</button>
+    </div>
+    <p class="keyhint" id="keyhint"></p>
+  </header>
+
+  <main>
+    <section class="panel" id="respondent-panel">
+      <h2>回答者情報</h2>
+      <form id="respondent-form" autocomplete="on">
+        <label>名前（または研修生ID）<span class="req">必須</span>
+          <input type="text" name="name" required>
+        </label>
+        <label>受験日<span class="req">必須</span>
+          <input type="date" name="exam_date" required>
+        </label>
+        <fieldset>
+          <legend>合否<span class="opt">任意</span></legend>
+          <label class="inline"><input type="radio" name="result" value="pass"> 合格</label>
+          <label class="inline"><input type="radio" name="result" value="fail"> 不合格</label>
+          <label class="inline"><input type="radio" name="result" value=""> 答えない</label>
+        </fieldset>
+      </form>
+      <p class="hint">入力内容と回答は、このブラウザに自動で途中保存されます。途中でやめるときは画面下の「途中までの回答を保存する」でファイルに保存でき、右上の「≡」メニューから読み込んで続きを回答できます。全テーマを確認済みにすると画面下に「回答を提出する」ボタンが出ます。提出するとファイルが保存されるので、講師に送ってください。</p>
+    </section>
+
+    <!-- 事前アンケート（質問は data/config.js の profile から組み立てる） -->
+    <section class="panel" id="profile-panel"></section>
+
+    <nav class="panel" id="theme-nav" aria-label="テーマ一覧"></nav>
+
+    <section id="theme-view" aria-live="polite"></section>
+  </main>
+
+  <!-- 進み具合と提出（画面下に固定） -->
+  <footer class="savebar" id="savebar">
+    <div class="savebar-row">
+      <div class="savebar-status" id="save-summary"></div>
+      <div class="savebar-actions">
+        <span id="save-buttons"></span>
+      </div>
+    </div>
+    <p id="save-message" role="status"></p>
+  </footer>
+
+  <!-- テーマ一覧のメニュー（左から開く） -->
+  <div id="menu-overlay" class="menu-overlay" hidden></div>
+  <aside id="theme-menu" class="theme-menu right" hidden aria-label="テーマ一覧">
+    <div class="menu-head">
+      <span>テーマ一覧</span>
+      <button type="button" id="menu-close" class="menu-close" aria-label="閉じる">✕</button>
+    </div>
+    <ol class="menu-list" id="menu-list"></ol>
+    <div class="menu-foot">
+      <button type="button" id="load-button" class="menu-action">保存したファイルを読み込んで続きから回答する</button>
+      <input type="file" id="load-file" accept=".json,application/json" hidden>
+      <button type="button" id="reset-button" class="subtle">回答をすべて消して最初からやり直す</button>
+    </div>
+  </aside>
+
+  <div id="lightbox" class="lightbox" hidden>
+    <div class="lightbox-bar">
+      <button type="button" id="lightbox-fit">画面に合わせる</button>
+      <button type="button" id="lightbox-close">閉じる ✕</button>
+    </div>
+    <div class="lightbox-body" id="lightbox-body"><img id="lightbox-img" alt=""></div>
+  </div>
+
+  <div id="load-error" class="panel error" hidden></div>
+
+  <!-- 読み込み順が大事。data/*.js は scripts/05_build_survey.py が書き出す -->
+  <script src="data/config.js"></script>
+  <script src="data/questions.js"></script>
+  <script src="js/adapters.js"></script>
+  <script src="js/state.js"></script>
+  <script src="js/render.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
