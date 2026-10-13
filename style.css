@@ -31,6 +31,7 @@
 }
 
 * { box-sizing: border-box; }
+[hidden] { display: none !important; }
 html { -webkit-text-size-adjust: 100%; }
 body {
   margin: 0; background: var(--bg); color: var(--text);
@@ -223,6 +224,7 @@ button.subtle { font-size: .75rem; color: var(--muted); background: none; border
 
 @media (max-width: 600px) {
   :root { --bar-h: 52px; }
+  h1 { white-space: normal; font-size: .98rem; line-height: 1.3; }
   main { padding: 6px 10px 20px; }
   #respondent-form { grid-template-columns: 1fr; }
   .intro .legend { font-size: .86rem; }
@@ -261,3 +263,64 @@ button.linklike.small { border: 0; background: none; color: var(--muted); text-d
 /* SIM のタスクの枠（選択肢と同じ見た目） */
 .sim-tasks { margin-top: 8px; }
 .q-text:empty { display: none; }
+
+/* ---------- 直前問題集（印刷用。js/booklet.js が #print-root に組み立てる） ---------- */
+#print-root { display: none; }
+.bk-measure { position: absolute; left: -99999px; top: 0; visibility: hidden; }
+.bk-page, .bk-measure {
+  font-family: "BIZ UDGothic", "BIZ UDPGothic", "Yu Gothic", "YuGothic", "Meiryo", sans-serif;
+  font-size: 10.5pt; line-height: 1.45; color: #111; background: #fff;
+}
+.bk-page { width: 210mm; height: 296mm; box-sizing: border-box; padding: 40pt 42pt 48pt; position: relative; overflow: hidden;
+  break-after: page; page-break-after: always; }
+.bk-page:last-child { break-after: auto; page-break-after: auto; }
+.bk-footer { position: absolute; left: 0; right: 0; bottom: 18pt; text-align: center; font-size: 9pt; color: #595959; }
+.bk-final { padding: 0; display: flex; align-items: center; justify-content: center; background: #fff; }
+.bk-final img { max-width: 100%; max-height: 100%; width: auto; height: auto; display: block; }
+.bk-cover-frame { position: relative; flex: none; }
+.bk-cover-frame img { width: 100%; height: 100%; display: block; }
+.bk-cover-date { position: absolute; left: 0; right: 0; text-align: center; font-size: 13pt; color: #555; letter-spacing: 0.05em; }
+.bk-q { border: 1pt solid #9aa3b0; padding: 6pt 9pt 8pt; margin: 0 0 10pt; background: #fff; }
+.bk-q.cont-bottom { border-bottom-style: dashed; margin-bottom: 0; }
+.bk-q.cont-top { border-top-style: dashed; }
+.bk-head { font-size: 10pt; border-bottom: 0.6pt solid #c3c9d2; padding-bottom: 3pt; margin-bottom: 5pt; }
+.bk-num { font-weight: 700; font-size: 11pt; }
+.bk-title { font-weight: 700; }
+.bk-text { margin: 0 0 5pt; white-space: pre-wrap; overflow-wrap: anywhere; }
+.bk-fig { margin: 0 0 5pt; }
+.bk-fig img { display: block; }
+.bk-choice { border: 0.6pt solid #b8bfca; padding: 2pt 6pt; margin: 0 0 3pt; white-space: pre-wrap; overflow-wrap: anywhere; }
+.bk-choice.ok { border: 1.4pt solid #1a7f37; background: #e6f4ea; font-weight: 700; }
+.bk-task { border: 0.6pt solid #b8bfca; padding: 3pt 6pt; margin: 0 0 3pt; white-space: pre-wrap; overflow-wrap: anywhere; }
+.bk-ans { margin: 5pt 0 0; font-weight: 700; color: #1a7f37; }
+.bk-pre { font-family: inherit; font-size: 8.8pt; line-height: 1.3; border: 0.6pt solid #b8bfca; border-top: 0; border-bottom: 0;
+  background: #f6f7f9; padding: 0 6pt 6pt; margin: 0; white-space: pre-wrap; overflow-wrap: anywhere; }
+.bk-pre.first { border-top: 0.6pt solid #b8bfca; padding-top: 4pt; margin-top: 2pt; }
+.bk-pre.last { border-bottom: 0.6pt solid #b8bfca; padding-bottom: 4pt; }
+.bk-table { border-collapse: collapse; margin: 2pt 0 0; width: 100%; }
+.bk-table td, .bk-table th { border: 0.6pt solid #9aa3b0; padding: 2pt 5pt; vertical-align: top; font-size: 10pt; text-align: left; }
+.bk-table th { background: #eef1f5; }
+
+.bk-section { font-size: 14pt; font-weight: 700; margin: 0 0 8pt; padding: 0 0 3pt; border-bottom: 1.4pt solid #333; }
+.bk-sub { font-size: 11.5pt; font-weight: 700; margin: 4pt 0 6pt; }
+.bk-note { color: #333; }
+.bk-dnd { display: grid; grid-template-columns: 1fr 1fr; gap: 10pt; }
+.bk-dnd-cap { font-size: 9pt; font-weight: 700; color: #555; margin-bottom: 3pt; }
+.bk-dnd-target { border: 0.6pt solid #9aa3b0; margin: 0 0 5pt; }
+.bk-dnd-label { font-weight: 700; padding: 2pt 6pt; background: #eef1f5; border-bottom: 0.6pt solid #9aa3b0; }
+.bk-dnd-slot { height: 17pt; margin: 4pt 6pt; border: 0.8pt dashed #7b8496; }
+.bk-anskey { border-collapse: collapse; width: 100%; margin: 0 0 8pt; }
+.bk-anskey td { border: 0.6pt solid #9aa3b0; padding: 2pt 5pt; font-size: 10pt; }
+.bk-anskey td.k { background: #eef1f5; font-weight: 700; width: 9%; white-space: nowrap; }
+.bk-anskey td.v { width: 16%; font-weight: 700; color: #1a7f37; }
+.bk-anskey td.v.wide { font-size: 8pt; font-weight: 400; color: #111; }
+
+@media print {
+  /* 余白 0：ブラウザのヘッダー・フッター（日付・ファイルの場所）が入る場所をなくす。余白は .bk-page の内側で取る */
+  @page { size: A4; margin: 0; }
+  html, body { background: #fff !important; padding: 0 !important; margin: 0 !important;
+    -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  body > *:not(#print-root) { display: none !important; }
+  #print-root { display: block; }
+  .bk-page, .bk-page * { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+}

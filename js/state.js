@@ -189,8 +189,9 @@
 
   SurveyState.prototype.respondentProblems = function () {
     var r = this.data.respondent, out = [];
-    if (!r.name || !r.name.trim()) out.push("名前");
-    if (!r.exam_date) out.push("受験日");
+    var fields = this.config.respondent_fields || ["name", "exam_date", "result"];
+    if (fields.indexOf("name") >= 0 && (!r.name || !r.name.trim())) out.push("名前");
+    if (fields.indexOf("exam_date") >= 0 && !r.exam_date) out.push("受験日");
     return out;
   };
 

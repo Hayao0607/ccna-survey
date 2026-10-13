@@ -41,6 +41,7 @@
     R.legend(document.getElementById("legend"), config);
     R.keyhint(document.getElementById("keyhint"), config);
 
+    applyLayoutOptions();
     var notice = state.load();
     bindRespondentForm();
     fillRespondentForm();
@@ -70,7 +71,12 @@
     document.getElementById("menu-overlay").addEventListener("click", closeMenu);
     document.addEventListener("keydown", onKey);
 
-    SurveyAdapters.loadAll(config.adapters).then(function () { adaptersReady = true; renderSubmit(); });
+    if (config.booklet) {
+      // ①版など：回答ファイルの保存・提出の代わりに「直前問題集を作る（PDF）」
+      SurveyBooklet.load().then(renderSubmit, function () { setMessage("問題集のデータ（data/booklet.js）が読み込めませんでした。", true); });
+    } else {
+      SurveyAdapters.loadAll(config.adapters).then(function () { adaptersReady = true; renderSubmit(); });
+    }
   }
 
   function bindRespondentForm() {
@@ -81,6 +87,19 @@
       if (t.name === "result") state.setRespondent("result", t.value || null);
     });
     form.addEventListener("submit", function (e) { e.preventDefault(); });
+  }
+
+  // 版の設定に合わせて画面の部品を出し分ける（回答者情報の項目・ファイルの読み込みボタン・案内文）
+  function applyLayoutOptions() {
+    var fields = config.respondent_fields || ["name", "exam_date", "result"];
+    Array.prototype.forEach.call(document.querySelectorAll("#respondent-form [data-field]"), function (el) {
+      el.hidden = fields.indexOf(el.getAttribute("data-field")) < 0;
+      Array.prototype.forEach.call(el.querySelectorAll("input"), function (x) { if (el.hidden) x.required = false; });
+    });
+    if (config.file_actions === false) {
+      document.getElementById("load-button").hidden = true;
+    }
+    if (config.hint) document.getElementById("respondent-hint").textContent = config.hint;
   }
 
   function renderProfile() {
@@ -190,6 +209,11 @@
   // 下の固定表示：「途中までの回答を保存する」。全テーマを確認済みにしたときだけ「回答を提出する」ボタンも出す
   function renderSubmit() {
     var box = document.getElementById("save-buttons");
+    if (config.booklet) {
+      box.innerHTML = "";
+      box.appendChild(R.el("button", { type: "button", className: "primary submit", text: "直前問題集を作る（PDF）", onclick: makeBooklet }));
+      return;
+    }
     if (!adaptersReady) return;
     box.innerHTML = "";
     var adapters = SurveyAdapters.list();
@@ -212,6 +236,35 @@
       type: "button", className: "linklike", title: "今の回答をファイルに保存します（あとで ≡ メニューから読み込んで続きを回答できます）",
       text: "途中までの回答を保存する", onclick: function () { submit(adapters[0], true); }
     }));
+  }
+
+  // 直前問題集：その人が判定を付けた問題で組み立て、ブラウザの印刷（PDF に保存）を開く
+  function makeBooklet() {
+    var date = state.data.respondent.exam_date;
+    if (!date) {
+      window.alert("受験日を入力してください。");
+      document.getElementById("respondent-panel").scrollIntoView({ behavior: "smooth" });
+      var d = document.getElementById("respondent-form").elements.exam_date;
+      if (d) d.focus();
+      return;
+    }
+    var picked = SurveyBooklet.selected(state);
+    if (!picked.length) {
+      window.alert("「" + SurveyBooklet.judgmentLabels(config).join("」「") + "」を付けた問題がありません。\n問題に判定を付けてから作ってください。");
+      return;
+    }
+    setMessage("問題集を作っています（" + picked.length + " 問）…");
+    SurveyBooklet.build(state, config).then(function (info) {
+      setMessage("印刷画面が開きます。送信先で「PDF に保存」を選んでください（" + info.questions + " 問。問題編 " + info.problemPages + " ページ・解答編 " + info.answerPages + " ページ＋表紙と最後のページ）。");
+      var oldTitle = document.title;
+      document.title = SurveyBooklet.fileTitle(date);   // 保存するファイル名の初期値になる
+      var restored = false;
+      var restore = function () { if (!restored) { restored = true; document.title = oldTitle; } };
+      window.addEventListener("afterprint", restore, { once: true });
+      setTimeout(function () { window.print(); setTimeout(restore, 500); }, 50);
+    }).catch(function (e) {
+      setMessage("問題集を作れませんでした: " + (e && e.message ? e.message : e), true);
+    });
   }
 
   // partial: true は途中保存（確認なし、ファイル名「途中_…」）

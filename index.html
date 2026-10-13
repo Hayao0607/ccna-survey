@@ -30,20 +30,20 @@
     <section class="panel" id="respondent-panel">
       <h2>回答者情報</h2>
       <form id="respondent-form" autocomplete="on">
-        <label>名前（または研修生ID）<span class="req">必須</span>
+        <label data-field="name">名前（または研修生ID）<span class="req">必須</span>
           <input type="text" name="name" required>
         </label>
-        <label>受験日<span class="req">必須</span>
+        <label data-field="exam_date">受験日<span class="req">必須</span>
           <input type="date" name="exam_date" required>
         </label>
-        <fieldset>
+        <fieldset data-field="result">
           <legend>合否<span class="opt">任意</span></legend>
           <label class="inline"><input type="radio" name="result" value="pass"> 合格</label>
           <label class="inline"><input type="radio" name="result" value="fail"> 不合格</label>
           <label class="inline"><input type="radio" name="result" value=""> 答えない</label>
         </fieldset>
       </form>
-      <p class="hint">入力内容と回答は、このブラウザに自動で途中保存されます。途中でやめるときは画面下の「途中までの回答を保存する」でファイルに保存でき、右上の「≡」メニューから読み込んで続きを回答できます。全テーマを確認済みにすると画面下に「回答を提出する」ボタンが出ます。提出するとファイルが保存されるので、講師に送ってください。</p>
+      <p class="hint" id="respondent-hint">入力内容と回答は、このブラウザに自動で途中保存されます。途中でやめるときは画面下の「途中までの回答を保存する」でファイルに保存でき、右上の「≡」メニューから読み込んで続きを回答できます。全テーマを確認済みにすると画面下に「回答を提出する」ボタンが出ます。提出するとファイルが保存されるので、講師に送ってください。</p>
     </section>
 
     <!-- 事前アンケート（質問は data/config.js の profile から組み立てる） -->
@@ -89,12 +89,16 @@
 
   <div id="load-error" class="panel error" hidden></div>
 
+  <!-- 印刷（PDF に保存）用の問題集。版の設定に booklet があるときだけ js/booklet.js が組み立てる -->
+  <div id="print-root" aria-hidden="true"></div>
+
   <!-- 読み込み順が大事。data/*.js は scripts/05_build_survey.py が書き出す -->
   <script src="data/config.js"></script>
   <script src="data/questions.js"></script>
   <script src="js/adapters.js"></script>
   <script src="js/state.js"></script>
   <script src="js/render.js"></script>
+  <script src="js/booklet.js"></script>
   <script src="js/app.js"></script>
 </body>
 </html>

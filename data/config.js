@@ -3,7 +3,7 @@ window.SURVEY_CONFIG = {
  "exam_id": "ccna-200-301",
  "exam_name": "CCNA 200-301",
  "title": "CCNA 200-301 出題アンケート",
- "questions_version": "2026-10-08",
+ "questions_version": "2026-10-13",
  "storage_key": "survey:ccna-200-301",
  "variant": null,
  "scope_books": [],
@@ -157,92 +157,92 @@ window.SURVEY_CONFIG = {
   {
    "id": "addressing",
    "name": "アドレスの計算",
-   "count": 87
+   "count": 89
   },
   {
    "id": "devices-virtualization",
    "name": "機器の種類と仮想化",
-   "count": 54
+   "count": 49
   },
   {
    "id": "switching",
    "name": "スイッチが転送する仕組み",
-   "count": 27
+   "count": 32
   },
   {
    "id": "vlan-trunk",
    "name": "VLANとトランク",
-   "count": 53
+   "count": 40
   },
   {
    "id": "stp",
    "name": "ループ防止（STP）",
-   "count": 44
+   "count": 39
   },
   {
    "id": "etherchannel",
    "name": "リンクの束ね（EtherChannel）",
-   "count": 25
+   "count": 21
   },
   {
    "id": "wireless",
    "name": "無線の仕組み",
-   "count": 70
+   "count": 100
   },
   {
    "id": "wireless-security",
    "name": "無線のセキュリティ",
-   "count": 33
+   "count": 37
   },
   {
    "id": "routing",
    "name": "経路の決まり方",
-   "count": 96
+   "count": 95
   },
   {
    "id": "ospf",
    "name": "OSPF",
-   "count": 35
+   "count": 28
   },
   {
    "id": "fhrp",
    "name": "ゲートウェイの冗長化",
-   "count": 14
+   "count": 18
   },
   {
    "id": "ip-services",
    "name": "アドレス配布・名前・時刻",
-   "count": 39
+   "count": 41
   },
   {
    "id": "monitoring-qos",
    "name": "監視と優先制御",
-   "count": 42
+   "count": 39
   },
   {
    "id": "device-access",
    "name": "機器への入り方",
-   "count": 46
+   "count": 44
   },
   {
    "id": "acl-l2security",
    "name": "通信の許可と拒否",
-   "count": 39
+   "count": 38
   },
   {
    "id": "aaa",
    "name": "認証の仕組み（AAA）",
-   "count": 31
+   "count": 26
   },
   {
    "id": "security-vpn",
    "name": "セキュリティの考え方とVPN",
-   "count": 52
+   "count": 48
   },
   {
    "id": "automation",
    "name": "自動化とプログラム",
-   "count": 132
+   "count": 135
   },
   {
    "id": "simulation",
@@ -253,5 +253,13 @@ window.SURVEY_CONFIG = {
  "adapters": [
   "download"
  ],
- "default_adapter": "download"
+ "default_adapter": "download",
+ "respondent_fields": [
+  "name",
+  "exam_date",
+  "result"
+ ],
+ "file_actions": true,
+ "hint": null,
+ "booklet": null
 };

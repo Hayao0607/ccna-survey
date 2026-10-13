@@ -288,19 +288,6 @@ window.SURVEY_QUESTIONS = [
   "figure": null
  },
  {
-  "qid": "CCNA-0019",
-  "theme": "network-basics",
-  "type": "single",
-  "question": "どの信号周波数が 1 分間に 60 回表示されますか。",
-  "choices": [
-   "A. 1 Hz",
-   "B. 1 GHz",
-   "C. 60 Hz",
-   "D. 60 GHz"
-  ],
-  "figure": null
- },
- {
   "qid": "CCNA-0020",
   "theme": "network-basics",
   "type": "single",
@@ -586,19 +573,6 @@ window.SURVEY_QUESTIONS = [
    "C. どちらも最大 55 メートルの距離をサポートする。",
    "D. どちらも最大 100 メートルの距離をサポートする。",
    "E. どちらも 500 MHz の周波数で動作する。"
-  ],
-  "figure": null
- },
- {
-  "qid": "CCNA-0037",
-  "theme": "network-basics",
-  "type": "single",
-  "question": "1 分間に 60 回現れる信号の頻度はどれですか。",
-  "choices": [
-   "A. 1Hz信号",
-   "B. 1 GHz 信号",
-   "C. 60 Hz 信号",
-   "D. 60 GHz 信号"
   ],
   "figure": null
  },
@@ -1678,6 +1652,32 @@ window.SURVEY_QUESTIONS = [
   "figure": null
  },
  {
+  "qid": "CCNA-0145",
+  "theme": "network-basics",
+  "type": "single",
+  "question": "コラプスドコア アーキテクチャにおけるコア層とディストリビューション層の機能は何ですか。",
+  "choices": [
+   "A. ルーターはレイヤー3でIPv4とIPv6アドレスを使用する必要があります。",
+   "B. コアレイヤーとディストリビューションレイヤーは、フェイルオーバーを可能にするために、2つの異なるデバイス上に配置されます。",
+   "C. ルーターは、IPv6ネットワークのレイヤー2冗長化のためにHSRPをサポートすることができます。",
+   "D. ルーターは、単一デバイスまたは冗長ペア上で動作します。"
+  ],
+  "figure": null
+ },
+ {
+  "qid": "CCNA-0291",
+  "theme": "network-basics",
+  "type": "single",
+  "question": "アクセスポートの追加が必要な場合、Spine-and-Leafアーキテクチャは、ネットワークのスケーラビリティをどのように実現するのでしょうか。",
+  "choices": [
+   "A. スパインスイッチ とリーフスイッチを追加し、両者間を冗長化する",
+   "B. スパインスイッチは、40GB以上のアップリンクで追加可能である",
+   "C. リーフスイッチは、すべてのスパインスイッチに接続可能な状態で追加することができる。",
+   "D. リーフスイッチは、コアのスパインスイッチに1回接続するだけで追加できます。"
+  ],
+  "figure": null
+ },
+ {
   "qid": "CCNA-0106",
   "theme": "addressing",
   "type": "single",
@@ -2184,19 +2184,6 @@ window.SURVEY_QUESTIONS = [
    "D. 2001:db8::5200:00ff:fe04:0000/64"
   ],
   "figure": "data/figures/CCNA-0144.png"
- },
- {
-  "qid": "CCNA-0145",
-  "theme": "addressing",
-  "type": "single",
-  "question": "コラプスドコア アーキテクチャにおけるコア層とディストリビューション層の機能は何ですか。",
-  "choices": [
-   "A. ルーターはレイヤー3でIPv4とIPv6アドレスを使用する必要があります。",
-   "B. コアレイヤーとディストリビューションレイヤーは、フェイルオーバーを可能にするために、2つの異なるデバイス上に配置されます。",
-   "C. ルーターは、IPv6ネットワークのレイヤー2冗長化のためにHSRPをサポートすることができます。",
-   "D. ルーターは、単一デバイスまたは冗長ペア上で動作します。"
-  ],
-  "figure": null
  },
  {
   "qid": "CCNA-0146",
@@ -3086,15 +3073,41 @@ window.SURVEY_QUESTIONS = [
   "figure": "data/figures/CCNA-0192.png"
  },
  {
-  "qid": "CCNA-0193",
-  "theme": "devices-virtualization",
-  "type": "single",
-  "question": "暗号化によってワイヤレス ネットワークはどのように保護されますか。",
+  "qid": "CCNA-0218",
+  "theme": "addressing",
+  "type": "exhibit_choice",
+  "question": "ホスト A がインターネットにアクセスできないのはなぜですか。",
   "choices": [
-   "A. フレーム内の改ざんを検出するための整合性チェック",
-   "B. ゼロデイネットワーク攻撃を検出して防止するための特殊な暗号方式",
-   "C. アクセスポイントとクライアントのみが理解できるようにデータを暗号化するアルゴリズム",
-   "D. 権限のないユーザーがネットワークにアクセスすることを防ぐポリシー"
+   "A. LANとWANのネットワークセグメントは異なる。",
+   "B. IPアドレスの割り当てが間違っている。",
+   "C. デフォルトゲートウェイは、最初に使用可能なIPアドレスであるべきです。",
+   "D. ドメインネームサーバーに到達できない。"
+  ],
+  "figure": "data/figures/CCNA-0218.png"
+ },
+ {
+  "qid": "CCNA-0221",
+  "theme": "addressing",
+  "type": "exhibit_choice",
+  "question": "ホストC がインターネットに接続できない原因となっている構成パラメータはどれか。",
+  "choices": [
+   "A. IPアドレスの割り当て",
+   "B. デフォルトゲートウェイ",
+   "C. IPネットワークマスク",
+   "D. 自動DNS"
+  ],
+  "figure": "data/figures/CCNA-0221.png"
+ },
+ {
+  "qid": "CCNA-0611",
+  "theme": "addressing",
+  "type": "single",
+  "question": "ネットワーク管理者は、64 ビット アドレス 2001:0EB8:00C1:2200:0001:0000:0000:0331/64 を使用して、新しい IPv6 ネットワークを設定しています。構成を簡素化するために、管理者はアドレスを圧縮することにしました。管理者はどの IP アドレスを設定する必要がありますか。",
+  "choices": [
+   "A. ipv6 address 2001:EB8:C1:22:1::331/64",
+   "B. ipv6 address 21:EB8:C1:2200:1::331/64",
+   "C. ipv6 address 2001:EB8:C1:2200:1:0000:331/64",
+   "D. ipv6 address 2001:EB8:C1:2200:1::331/64"
   ],
   "figure": null
  },
@@ -3121,32 +3134,6 @@ window.SURVEY_QUESTIONS = [
    "B. ファイアウォール",
    "C. 侵入防止システム",
    "D. ワイヤレスコントローラ"
-  ],
-  "figure": null
- },
- {
-  "qid": "CCNA-0196",
-  "theme": "devices-virtualization",
-  "type": "single",
-  "question": "ワイヤレス ネットワークの SSID の特徴は何ですか。",
-  "choices": [
-   "A. 権限のないユーザーを防ぐためにポリシーを使用する",
-   "B. WLAN 上のアクセス ポイントを識別する",
-   "C. ユーザーにログイン ID を要求する",
-   "D. WLAN に名前を関連付ける"
-  ],
-  "figure": null
- },
- {
-  "qid": "CCNA-0197",
-  "theme": "devices-virtualization",
-  "type": "single",
-  "question": "すべてのクライアント トラフィックをワイヤレス コントローラ経由で転送するようにアクセスポイントを構成する必要があります。このタスクを実行するには、どのモードを有効にしますか。",
-  "choices": [
-   "A. ローカル",
-   "B. モニター",
-   "C. 自律",
-   "D. 不正検出"
   ],
   "figure": null
  },
@@ -3230,59 +3217,6 @@ window.SURVEY_QUESTIONS = [
   "figure": null
  },
  {
-  "qid": "CCNA-0202",
-  "theme": "devices-virtualization",
-  "type": "single",
-  "question": "ESSID の目的は何ですか。",
-  "choices": [
-   "A. 標準的なSSIDよりも高いセキュリティを提供します。",
-   "B. 802.11 r、802.11k、802.11v などの高速ローミング機能をサポートしています。",
-   "C. アクセスポイントのワイヤレスMACアドレスとして機能します。",
-   "D. 複数のアクセスポイントがクライアント接続のために共通のネットワークを提供することを可能にします。"
-  ],
-  "figure": null
- },
- {
-  "qid": "CCNA-0203",
-  "theme": "devices-virtualization",
-  "type": "multiple",
-  "question": "DHCP サーバーの 2 つの機能は何ですか。(2つ選択)",
-  "choices": [
-   "A. 集中 IP 管理をサポートする",
-   "B. ネットワークに追加されたときに DHCP DISCOVER メッセージを発行する",
-   "C. IP アドレスを発行してクライアントの DHCP OFFER 要求に応答する",
-   "D. ユーザーが独自の IP アドレスをホストに割り当てることを防ぐ",
-   "E. ネットワーク内のホストに動的 IP 構成を割り当てる"
-  ],
-  "figure": null
- },
- {
-  "qid": "CCNA-0204",
-  "theme": "devices-virtualization",
-  "type": "single",
-  "question": "無線ネットワークにおけるSSIDの特徴は何ですか？",
-  "choices": [
-   "A. スパイウェア対策",
-   "B. 無線LANコントローラの識別に使用される",
-   "C. 無線クライアントが特定のネットワークに接続できるようにする",
-   "D. アクセスポイントへの接続に使用するパスワード"
-  ],
-  "figure": null
- },
- {
-  "qid": "CCNA-0205",
-  "theme": "devices-virtualization",
-  "type": "single",
-  "question": "クライアントが同じSSID上のアクセスポイント間をローミングする場合、どの802.11管理フレームタイプが送信されますか。",
-  "choices": [
-   "A. 再関連付け要求",
-   "B. 認証要求",
-   "C. アソシエーション要求",
-   "D. プローブ要求"
-  ],
-  "figure": null
- },
- {
   "qid": "CCNA-0206",
   "theme": "devices-virtualization",
   "type": "single",
@@ -3292,19 +3226,6 @@ window.SURVEY_QUESTIONS = [
    "B. アクセス ポイントにはデフォルト レベルが使用される。",
    "C. ケーブルの 4 ペアすべてが使用されている。",
    "D. デバイスが受電装置であることを検出する。"
-  ],
-  "figure": null
- },
- {
-  "qid": "CCNA-0207",
-  "theme": "devices-virtualization",
-  "type": "single",
-  "question": "エンジニアは、2.4GHz チャネルの使用率が高く、5GHz チャネルの使用率が低いことを観察しました。クライアントが 5GHz アクセス ポイントを優先的に使用できるようにするには、何を構成する必要がありますか。",
-  "choices": [
-   "A. クライアントの帯域選択",
-   "B. ローミングされたクライアントのリアンカー",
-   "C. OEAP スプリットトンネル",
-   "D. 11ac MU-MIMO"
   ],
   "figure": null
  },
@@ -3362,46 +3283,6 @@ window.SURVEY_QUESTIONS = [
   "figure": null
  },
  {
-  "qid": "CCNA-0212",
-  "theme": "devices-virtualization",
-  "type": "single",
-  "question": "SSID の目的は何ですか?",
-  "choices": [
-   "A. WLAN 上の個々のアクセス ポイントを識別します。",
-   "B. アクセス ポイントに入るトラフィックを区別します。",
-   "C. ネットワーク セキュリティを提供します。",
-   "D. WLAN を識別します。"
-  ],
-  "figure": null
- },
- {
-  "qid": "CCNA-0213",
-  "theme": "devices-virtualization",
-  "type": "single",
-  "question": "ワイヤレス ネットワークにおける SSID の特徴は何ですか?",
-  "choices": [
-   "A. WLAN 上のアクセス ポイントを識別します",
-   "B. パスワードを使用してアクセス ポイントに接続する",
-   "C. ポリシーを使用して無許可のユーザーを防止する",
-   "D. 大文字と小文字を区別するテキスト文字列を使用する"
-  ],
-  "figure": null
- },
- {
-  "qid": "CCNA-0214",
-  "theme": "devices-virtualization",
-  "type": "multiple",
-  "question": "DHCP サーバーの 2 つの機能は何ですか? (2 つお選びください。)",
-  "choices": [
-   "A. ネットワークに追加されたときに DHCPDISCOVER メッセージを発行する",
-   "B. IP アドレスを発行してクライアントの DHCPOFFER 要求に応答する",
-   "C. 一元的な IP 管理をサポートする",
-   "D. ネットワーク内のホストに動的 IP 構成を割り当てる",
-   "E. ユーザーが自分の IP アドレスをホストに割り当てることを防止する"
-  ],
-  "figure": null
- },
- {
   "qid": "CCNA-0215",
   "theme": "devices-virtualization",
   "type": "exhibit_choice",
@@ -3441,19 +3322,6 @@ window.SURVEY_QUESTIONS = [
   "figure": "data/figures/CCNA-0217.png"
  },
  {
-  "qid": "CCNA-0218",
-  "theme": "devices-virtualization",
-  "type": "exhibit_choice",
-  "question": "ホスト A がインターネットにアクセスできないのはなぜですか。",
-  "choices": [
-   "A. LANとWANのネットワークセグメントは異なる。",
-   "B. IPアドレスの割り当てが間違っている。",
-   "C. デフォルトゲートウェイは、最初に使用可能なIPアドレスであるべきです。",
-   "D. ドメインネームサーバーに到達できない。"
-  ],
-  "figure": "data/figures/CCNA-0218.png"
- },
- {
   "qid": "CCNA-0219",
   "theme": "devices-virtualization",
   "type": "single",
@@ -3478,19 +3346,6 @@ window.SURVEY_QUESTIONS = [
    "D. 192.168.25.254"
   ],
   "figure": "data/figures/CCNA-0220.png"
- },
- {
-  "qid": "CCNA-0221",
-  "theme": "devices-virtualization",
-  "type": "exhibit_choice",
-  "question": "ホストC がインターネットに接続できない原因となっている構成パラメータはどれか。",
-  "choices": [
-   "A. IPアドレスの割り当て",
-   "B. デフォルトゲートウェイ",
-   "C. IPネットワークマスク",
-   "D. 自動DNS"
-  ],
-  "figure": "data/figures/CCNA-0221.png"
  },
  {
   "qid": "CCNA-0222",
@@ -3841,6 +3696,124 @@ window.SURVEY_QUESTIONS = [
    "B. ニーズに基づいた容量の自動調整",
    "C. ニーズに基づいてマルチテナント モデルでリソースをプールする",
    "D. テナントによるコンピューティング リソースのセルフサービス"
+  ],
+  "figure": null
+ },
+ {
+  "qid": "CCNA-0296",
+  "theme": "devices-virtualization",
+  "type": "single",
+  "question": "エンドポイントの機能について適切なのは次のうちどれですか。",
+  "choices": [
+   "A. ネットワーク内のホスト間でユニキャスト通信を渡す。",
+   "B. 同じ VLAN 内のデバイス間でブロードキャスト トラフィックを送信する。",
+   "C. ネットワークの信頼できるセクションと信頼できないセクションの間にセキュリティを提供する。",
+   "D. 個々のユーザーがネットワーク サービスにアクセスするために直接使用する。"
+  ],
+  "figure": null
+ },
+ {
+  "qid": "CCNA-0437",
+  "theme": "devices-virtualization",
+  "type": "drag_drop",
+  "question": "コマンドを左側から右側の宛先インターフェイスにドラッグ アンド ドロップします。すべてのコマンドが使用されるわけではありません。",
+  "choices": [],
+  "figure": null,
+  "dnd": {
+   "items": [
+    "テンプレートを使用してQOS設定を実装する",
+    "Wi-Fi信号を強化する機能",
+    "PoE用の特別なアダプタが必要",
+    "デバイスグループ内のユーザー接続データを提供する",
+    "ワークグループブリッジとして構成可能"
+   ],
+   "targets": [
+    {
+     "label": "アクセスポイント",
+     "slots": 2
+    },
+    {
+     "label": "無線LANコントローラー",
+     "slots": 2
+    }
+   ]
+  }
+ },
+ {
+  "qid": "CCNA-0510",
+  "theme": "devices-virtualization",
+  "type": "single",
+  "question": "IP ルーティング テーブルの内容を表示するために、route print コマンドの代わりに使用される Windows コマンドはどれですか。",
+  "choices": [
+   "A. netstat-n",
+   "B. ipconfig",
+   "C. ifconfig",
+   "D. netstat-r"
+  ],
+  "figure": null
+ },
+ {
+  "qid": "CCNA-0758",
+  "theme": "devices-virtualization",
+  "type": "single",
+  "question": "Web サーバーによって実行される機能とは何ですか。",
+  "choices": [
+   "A. クライアントデバイスから電子メールを送受信する",
+   "B. FTP アクセス用にファイルを安全に保存する",
+   "C. ユーザーのアイデンティティを認証および認可する",
+   "D. HTTP 経由で送信されるアプリケーションを提供する"
+  ],
+  "figure": null
+ },
+ {
+  "qid": "CCNA-0825",
+  "theme": "devices-virtualization",
+  "type": "single",
+  "question": "次世代IPSの機能とは何ですか。",
+  "choices": [
+   "A. ユーザーアクティビティとネットワークイベントを相関させる",
+   "B. コントローラーベースのネットワーク内でコントローラーとして機能する",
+   "C. RADIUS サーバーと統合して、レイヤー 2 デバイス認証ルールを適用する。",
+   "D. 学習した MAC アドレスに基づいて転送を決定する。"
+  ],
+  "figure": null
+ },
+ {
+  "qid": "CCNA-0840",
+  "theme": "devices-virtualization",
+  "type": "single",
+  "question": "次世代 IPS の機能とは何ですか？",
+  "choices": [
+   "A. ネットワーク内で観察された脆弱性を分析し、軽減します。",
+   "B. コントローラーベースのネットワーク内でコントローラーとして機能します。",
+   "C. RADIUS サーバーと統合して、レイヤー 2 デバイス認証ルールを適用します。",
+   "D. 学習した MAC アドレスに基づいて転送を決定します 。"
+  ],
+  "figure": null
+ },
+ {
+  "qid": "CCNA-0957",
+  "theme": "devices-virtualization",
+  "type": "single",
+  "question": "企業ネットワーク上のファイアウォールの機能は何ですか。",
+  "choices": [
+   "A. 企業とISPの間の仲介装置として機能する。",
+   "B. インターネット上のホストへのデフォルトゲートウェイとして機能する。",
+   "C. ステートレス・インスペクションに基づいてトラフィックを処理する",
+   "D. イングレスとイグレスのトラフィックを許可したり拒否したりする"
+  ],
+  "figure": null
+ },
+ {
+  "qid": "CCNA-0974",
+  "theme": "devices-virtualization",
+  "type": "single",
+  "question": "企業ネットワーク上のファイアウォールの機能は何ですか?",
+  "choices": [
+   "A. 入力トラフィックと出力トラフィックを許可および拒否します。",
+   "B. インターネット上のホストへのデフォルト ゲートウェイとして機能します。",
+   "C. ステートレス検査に基づいてトラフィックを処理します。",
+   "D. 企業とその ISP の間の仲介デバイスとして機能します。"
   ],
   "figure": null
  },
@@ -4197,28 +4170,67 @@ window.SURVEY_QUESTIONS = [
   "figure": "data/figures/CCNA-0273.png"
  },
  {
-  "qid": "CCNA-0274",
-  "theme": "vlan-trunk",
+  "qid": "CCNA-0278",
+  "theme": "switching",
   "type": "single",
-  "question": "WLCのディストリビューションポートに接続するスイッチのポートをトランクモードに設定する理由は何ですか。",
+  "question": "スイッチ上でフレームスイッチングはどのように機能しますか。",
   "choices": [
-   "A. データパスのリンク障害による冗長性を排除するため",
-   "B. データパスで複数の VLAN を使用できるようにするため",
-   "C. アウトオブバンド管理のリンク障害が発生した場合に冗長性を提供するため",
-   "D. 複数の VLAN がアウトオブバンド管理を提供できるようにするため"
+   "A. CDP を使用してフレームを隣接ポートに転送する",
+   "B. 既知の送信元 VLAN を含むフレームを変更する",
+   "C. 不明な宛先からのフレームを検査してドロップする",
+   "D. 既知の宛先を宛先ポートに転送する"
   ],
   "figure": null
  },
  {
-  "qid": "CCNA-0275",
-  "theme": "vlan-trunk",
+  "qid": "CCNA-0287",
+  "theme": "switching",
   "type": "single",
-  "question": "SSID の仕様はどれですか。",
+  "question": "MACアドレス学習機能について適切なのは次のうちどれですか。",
   "choices": [
-   "A. Cisco 独自のセキュリティ機能です",
-   "B. 1つの数字と1つの文字を含める必要があります",
-   "C. スイッチ上の VLAN を定義します",
-   "D. 大文字と小文字が区別されます"
+   "A. トランクに接続されているすべてのインターフェイスではデフォルトで無効になっている。",
+   "B. 管理 VLAN のセキュリティを強化する。",
+   "C. すべての VLAN およびインターフェイスでデフォルトで有効になっている。",
+   "D. MAC アドレス フラッディングの可能性が高まる。"
+  ],
+  "figure": null
+ },
+ {
+  "qid": "CCNA-0288",
+  "theme": "switching",
+  "type": "single",
+  "question": "スイッチのMAC学習機能について正しいのは次のうちどれですか。",
+  "choices": [
+   "A. MAC アドレス学習は、デフォルトではすべての VLAN で無効になっている。",
+   "B. アドレス テーブルにリストされていない宛先 MAC アドレスに対して受信したフレームはドロップされる。",
+   "C. MAC アドレス テーブルは、ARP テーブルを設定するために使用される。",
+   "D. 静的 MAC アドレスが手動で MAC テーブルに追加される。"
+  ],
+  "figure": null
+ },
+ {
+  "qid": "CCNA-0310",
+  "theme": "switching",
+  "type": "single",
+  "question": "フレーム切り替えはスイッチ上でどのように機能しますか?",
+  "choices": [
+   "A. 不明な宛先を受信ポートを除くすべてのポートにフラッディングします。",
+   "B. 既知の送信元 VLAN を含むフレームを変更する",
+   "C. 送信元と宛先の MAC アドレスを書き換える",
+   "D. CRC が 5 未満のフレームをバッファリングして転送する"
+  ],
+  "figure": null
+ },
+ {
+  "qid": "CCNA-0714",
+  "theme": "switching",
+  "type": "single",
+  "question": "スイッチ上で MAC 学習はどのように機能しますか。",
+  "choices": [
+   "A. キューイングせずにすべてのポートにフレームをブロードキャストする",
+   "B. 不明な送信元 MAC アドレスをアドレス テーブルに追加する",
+   "C. 新しいフレームを受信すると再送信要求を送信する",
+   "D. 宛先が不明なフレームをマルチキャスト グループに送信する"
   ],
   "figure": null
  },
@@ -4273,33 +4285,6 @@ window.SURVEY_QUESTIONS = [
     }
    ]
   }
- },
- {
-  "qid": "CCNA-0278",
-  "theme": "vlan-trunk",
-  "type": "single",
-  "question": "スイッチ上でフレームスイッチングはどのように機能しますか。",
-  "choices": [
-   "A. CDP を使用してフレームを隣接ポートに転送する",
-   "B. 既知の送信元 VLAN を含むフレームを変更する",
-   "C. 不明な宛先からのフレームを検査してドロップする",
-   "D. 既知の宛先を宛先ポートに転送する"
-  ],
-  "figure": null
- },
- {
-  "qid": "CCNA-0279",
-  "theme": "vlan-trunk",
-  "type": "multiple",
-  "question": "ワイヤレスネットワーク用に新しい WLAN を設定します。これらの要件を満たすアクションはどれですか。(2つ選択)\n・デュアルバンドクライアントは、5GHzに誘導される\n・ワイヤレスクライアントは、返された RADIUS属性でVLAN 設定を適用できる",
-  "choices": [
-   "A. Client Band Select オプションを有効にする",
-   "B. Coverage Hole Detection オプションを有効にする",
-   "C. Alloe AAA Override オプションを有効にする",
-   "D. MFP Client Protection オプションを必須に設定する",
-   "E. Aironet IE オプションを有効にする"
-  ],
-  "figure": null
  },
  {
   "qid": "CCNA-0280",
@@ -4365,71 +4350,6 @@ window.SURVEY_QUESTIONS = [
   "figure": "data/figures/CCNA-0284.png"
  },
  {
-  "qid": "CCNA-0285",
-  "theme": "vlan-trunk",
-  "type": "single",
-  "question": "FlexConnectモードで動作しているAPに接続し、WLANがフレックスローカルスイッチングを使用している場合、どのスイッチポート構成を設定しますか？",
-  "choices": [
-   "A. 1つのVLANを持つアクセスポート",
-   "B. プルーニングされたVLANを持つトランクポート",
-   "C. IPアドレスを持つレイヤ3ポート",
-   "D. MACフィルタリングが有効になっているタグ付きポート"
-  ],
-  "figure": null
- },
- {
-  "qid": "CCNA-0286",
-  "theme": "vlan-trunk",
-  "type": "single",
-  "question": "異なるファブリック内の 2 つのエッジ ノード間にトンネルを提供するためにソフトウェア デファインド アクセス (SDA) で使用されるプロトコルはどれですか。",
-  "choices": [
-   "A. GRE",
-   "B. VLAN",
-   "C. VXLAN",
-   "D. PPP"
-  ],
-  "figure": null
- },
- {
-  "qid": "CCNA-0287",
-  "theme": "vlan-trunk",
-  "type": "single",
-  "question": "MACアドレス学習機能について適切なのは次のうちどれですか。",
-  "choices": [
-   "A. トランクに接続されているすべてのインターフェイスではデフォルトで無効になっている。",
-   "B. 管理 VLAN のセキュリティを強化する。",
-   "C. すべての VLAN およびインターフェイスでデフォルトで有効になっている。",
-   "D. MAC アドレス フラッディングの可能性が高まる。"
-  ],
-  "figure": null
- },
- {
-  "qid": "CCNA-0288",
-  "theme": "vlan-trunk",
-  "type": "single",
-  "question": "スイッチのMAC学習機能について正しいのは次のうちどれですか。",
-  "choices": [
-   "A. MAC アドレス学習は、デフォルトではすべての VLAN で無効になっている。",
-   "B. アドレス テーブルにリストされていない宛先 MAC アドレスに対して受信したフレームはドロップされる。",
-   "C. MAC アドレス テーブルは、ARP テーブルを設定するために使用される。",
-   "D. 静的 MAC アドレスが手動で MAC テーブルに追加される。"
-  ],
-  "figure": null
- },
- {
-  "qid": "CCNA-0289",
-  "theme": "vlan-trunk",
-  "type": "single",
-  "question": "AP とクライアント アクセスで使用される VLAN が異なる場合、ローカルでスイッチされる FlexConnect AP について何を考慮する必要がありますか。",
-  "choices": [
-   "A. AP は、LAG モードで複数のリンクを使用してスイッチに接続する必要がある。",
-   "B. ネイティブ VLAN は AP の管理 VLAN と一致する必要がある。",
-   "C. スイッチ ポート モードはトランクに設定する必要がある。",
-   "D. IEEE 802.1Q トランキングはスイッチ ポートで無効にする必要がある。"
-  ],
-  "figure": null
- },
- {
   "qid": "CCNA-0290",
   "theme": "vlan-trunk",
   "type": "exhibit_choice",
@@ -4441,19 +4361,6 @@ window.SURVEY_QUESTIONS = [
    "D. トランク ポートで受信した VTP アドバタイズメントのみを転送する。"
   ],
   "figure": "data/figures/CCNA-0290.png"
- },
- {
-  "qid": "CCNA-0291",
-  "theme": "vlan-trunk",
-  "type": "single",
-  "question": "アクセスポートの追加が必要な場合、Spine-and-Leafアーキテクチャは、ネットワークのスケーラビリティをどのように実現するのでしょうか。",
-  "choices": [
-   "A. スパインスイッチ とリーフスイッチを追加し、両者間を冗長化する",
-   "B. スパインスイッチは、40GB以上のアップリンクで追加可能である",
-   "C. リーフスイッチは、すべてのスパインスイッチに接続可能な状態で追加することができる。",
-   "D. リーフスイッチは、コアのスパインスイッチに1回接続するだけで追加できます。"
-  ],
-  "figure": null
  },
  {
   "qid": "CCNA-0292",
@@ -4492,32 +4399,6 @@ window.SURVEY_QUESTIONS = [
    "B. VTP",
    "C. VLAN",
    "D. CSMA/CD"
-  ],
-  "figure": null
- },
- {
-  "qid": "CCNA-0295",
-  "theme": "vlan-trunk",
-  "type": "single",
-  "question": "アクセス ポイントがワイヤレス ネットワーク デバイスへのワイヤレス接続を確立および維持するために使用する一意の識別子はどれですか。",
-  "choices": [
-   "A. VLAN ID",
-   "B. SSID",
-   "C. RFID",
-   "D. WLAN ID"
-  ],
-  "figure": null
- },
- {
-  "qid": "CCNA-0296",
-  "theme": "vlan-trunk",
-  "type": "single",
-  "question": "エンドポイントの機能について適切なのは次のうちどれですか。",
-  "choices": [
-   "A. ネットワーク内のホスト間でユニキャスト通信を渡す。",
-   "B. 同じ VLAN 内のデバイス間でブロードキャスト トラフィックを送信する。",
-   "C. ネットワークの信頼できるセクションと信頼できないセクションの間にセキュリティを提供する。",
-   "D. 個々のユーザーがネットワーク サービスにアクセスするために直接使用する。"
   ],
   "figure": null
  },
@@ -4691,19 +4572,6 @@ window.SURVEY_QUESTIONS = [
   "figure": null
  },
  {
-  "qid": "CCNA-0310",
-  "theme": "vlan-trunk",
-  "type": "single",
-  "question": "フレーム切り替えはスイッチ上でどのように機能しますか?",
-  "choices": [
-   "A. 不明な宛先を受信ポートを除くすべてのポートにフラッディングします。",
-   "B. 既知の送信元 VLAN を含むフレームを変更する",
-   "C. 送信元と宛先の MAC アドレスを書き換える",
-   "D. CRC が 5 未満のフレームをバッファリングして転送する"
-  ],
-  "figure": null
- },
- {
   "qid": "CCNA-0311",
   "theme": "vlan-trunk",
   "type": "exhibit_choice",
@@ -4782,19 +4650,6 @@ window.SURVEY_QUESTIONS = [
   "figure": "data/figures/CCNA-0316.png"
  },
  {
-  "qid": "CCNA-0317",
-  "theme": "vlan-trunk",
-  "type": "single",
-  "question": "LAG の使用時に WLC 上のどのインターフェースが 1 つに制限されますか。",
-  "choices": [
-   "A. APマネージャ",
-   "B. 仮想",
-   "C. トランク",
-   "D. サービス"
-  ],
-  "figure": null
- },
- {
   "qid": "CCNA-0318",
   "theme": "vlan-trunk",
   "type": "exhibit_choice",
@@ -4806,19 +4661,6 @@ window.SURVEY_QUESTIONS = [
    "D. Switch(config-if)#switchport mode trunk\nSwitch(config-if)#switchport trunk encapsulation dot1q\nSwitch(config-if)#switchport trunk allowed vlan 100,105\nSwitch(config if)#switchport trunk native vlan 3"
   ],
   "figure": "data/figures/CCNA-0318.png"
- },
- {
-  "qid": "CCNA-0319",
-  "theme": "vlan-trunk",
-  "type": "single",
-  "question": "Cisco WLC に複数のディストリビューション システム ポートと 1 つの IP アドレスのみが設定されている場合に必要な標準はどれですか。",
-  "choices": [
-   "A. 802.3ad",
-   "B. 802.1q",
-   "C. 802.1d",
-   "D. 802.1af"
-  ],
-  "figure": null
  },
  {
   "qid": "CCNA-0320",
@@ -4912,6 +4754,32 @@ window.SURVEY_QUESTIONS = [
   "figure": null
  },
  {
+  "qid": "CCNA-0387",
+  "theme": "vlan-trunk",
+  "type": "single",
+  "question": "複数のVLANのトラフィックを伝送するために使用されるポート構成のタイプはどれですか？",
+  "choices": [
+   "A. LAG",
+   "B. EtherChannel",
+   "C. トランク",
+   "D. アクセス"
+  ],
+  "figure": null
+ },
+ {
+  "qid": "CCNA-0388",
+  "theme": "vlan-trunk",
+  "type": "single",
+  "question": "イーサネット スイッチのポート構成のどのオプションを使用すると、複数の VLAN からのトラフィックが同じ物理リンクを介して移動できるようになりますか?",
+  "choices": [
+   "A. LAG",
+   "B. EtherChannel",
+   "C. trunk",
+   "D. access"
+  ],
+  "figure": null
+ },
+ {
   "qid": "CCNA-0327",
   "theme": "stp",
   "type": "single",
@@ -4962,19 +4830,6 @@ window.SURVEY_QUESTIONS = [
    "D. SW2\nBridge Priority - 40960\nmac-address 04:44:97:51:63:17"
   ],
   "figure": "data/figures/CCNA-0330.png"
- },
- {
-  "qid": "CCNA-0331",
-  "theme": "stp",
-  "type": "single",
-  "question": "企業が社内でネットワーク自動化を選択する理由は何ですか。",
-  "choices": [
-   "A. データサービスをより速く提供する",
-   "B. ネットワークのセグメンテーションを可能にする",
-   "C. スパニングツリーのループ回避を緩和する",
-   "D. きめ細かいQoSを実装する"
-  ],
-  "figure": null
  },
  {
   "qid": "CCNA-0332",
@@ -5278,45 +5133,6 @@ window.SURVEY_QUESTIONS = [
   "figure": null
  },
  {
-  "qid": "CCNA-0355",
-  "theme": "stp",
-  "type": "single",
-  "question": "Cisco WLC（Wireless LAN Controller）の役割として誤っているものはどれか。",
-  "choices": [
-   "A. 複数のアクセスポイントを集中管理し、無線LAN設定の一元化を行う",
-   "B. DHCPアドレスの割り当てを行う",
-   "C. 有線ネットワークのスパニングツリーを管理する",
-   "D. DNSの名前解決を行う"
-  ],
-  "figure": null
- },
- {
-  "qid": "CCNA-0356",
-  "theme": "stp",
-  "type": "single",
-  "question": "Cisco WLC（Wireless LAN Controller）の役割として誤っているものはどれか。",
-  "choices": [
-   "A. 複数のアクセスポイントを集中管理し、無線LAN設定の一元化を行う",
-   "B. 有線ネットワークのスパニングツリーを管理する",
-   "C. DHCPアドレスの割り当てを行う",
-   "D. DNSの名前解決を行う"
-  ],
-  "figure": null
- },
- {
-  "qid": "CCNA-0357",
-  "theme": "stp",
-  "type": "single",
-  "question": "Cisco WLC（Wireless LAN Controller）の役割として誤っているものはどれか。",
-  "choices": [
-   "A. DHCPアドレスの割り当てを行う",
-   "B. 有線ネットワークのスパニングツリーを管理する",
-   "C. DNSの名前解決を行う",
-   "D. 複数のアクセスポイントを集中管理し、無線LAN設定の一元化を行う"
-  ],
-  "figure": null
- },
- {
   "qid": "CCNA-0358",
   "theme": "stp",
   "type": "single",
@@ -5326,19 +5142,6 @@ window.SURVEY_QUESTIONS = [
    "B. Listening",
    "C. Discarding",
    "D. Learning"
-  ],
-  "figure": null
- },
- {
-  "qid": "CCNA-0359",
-  "theme": "stp",
-  "type": "single",
-  "question": "次の中から、cisco WLC（Wireless LAN Controller）の役割として最も適切なものはどれか。",
-  "choices": [
-   "A. DNSの名前解決を行う",
-   "B. 有線ネットワークのスパニングツリーを管理する",
-   "C. 複数のアクセスポイントを集中管理し、無線LAN設定の一元化を行う",
-   "D. DHCPアドレスの割り当てを行う"
   ],
   "figure": null
  },
@@ -5484,19 +5287,6 @@ window.SURVEY_QUESTIONS = [
    "D. SW4"
   ],
   "figure": "data/figures/CCNA-0370.png"
- },
- {
-  "qid": "CCNA-0371",
-  "theme": "etherchannel",
-  "type": "single",
-  "question": "自律 AP が 2つのVLAN を WLAN にマッピングする場合、有線ネットワークへの接続に使用されるポートのタイプはどれですか。",
-  "choices": [
-   "A. LAG",
-   "B. EtherChannel",
-   "C. trunk",
-   "D. access"
-  ],
-  "figure": null
  },
  {
   "qid": "CCNA-0372",
@@ -5694,45 +5484,6 @@ window.SURVEY_QUESTIONS = [
   "figure": "data/figures/CCNA-0386.png"
  },
  {
-  "qid": "CCNA-0387",
-  "theme": "etherchannel",
-  "type": "single",
-  "question": "複数のVLANのトラフィックを伝送するために使用されるポート構成のタイプはどれですか？",
-  "choices": [
-   "A. LAG",
-   "B. EtherChannel",
-   "C. トランク",
-   "D. アクセス"
-  ],
-  "figure": null
- },
- {
-  "qid": "CCNA-0388",
-  "theme": "etherchannel",
-  "type": "single",
-  "question": "イーサネット スイッチのポート構成のどのオプションを使用すると、複数の VLAN からのトラフィックが同じ物理リンクを介して移動できるようになりますか?",
-  "choices": [
-   "A. LAG",
-   "B. EtherChannel",
-   "C. trunk",
-   "D. access"
-  ],
-  "figure": null
- },
- {
-  "qid": "CCNA-0389",
-  "theme": "etherchannel",
-  "type": "single",
-  "question": "AP が FlexConnect モードの場合、スイッチ インターフェイスはどのように設定する必要がありますか。",
-  "choices": [
-   "A. アクセスポート",
-   "B. EtherChannel",
-   "C. PoE ポート",
-   "D. トランクポート"
-  ],
-  "figure": null
- },
- {
   "qid": "CCNA-0390",
   "theme": "etherchannel",
   "type": "single",
@@ -5809,6 +5560,332 @@ window.SURVEY_QUESTIONS = [
    "D. Switch1(config) # interface port-channel 1\nSwitch1(config-if) # lacp max-bundle 1"
   ],
   "figure": "data/figures/CCNA-0395.png"
+ },
+ {
+  "qid": "CCNA-0019",
+  "theme": "wireless",
+  "type": "single",
+  "question": "どの信号周波数が 1 分間に 60 回表示されますか。",
+  "choices": [
+   "A. 1 Hz",
+   "B. 1 GHz",
+   "C. 60 Hz",
+   "D. 60 GHz"
+  ],
+  "figure": null
+ },
+ {
+  "qid": "CCNA-0037",
+  "theme": "wireless",
+  "type": "single",
+  "question": "1 分間に 60 回現れる信号の頻度はどれですか。",
+  "choices": [
+   "A. 1Hz信号",
+   "B. 1 GHz 信号",
+   "C. 60 Hz 信号",
+   "D. 60 GHz 信号"
+  ],
+  "figure": null
+ },
+ {
+  "qid": "CCNA-0193",
+  "theme": "wireless",
+  "type": "single",
+  "question": "暗号化によってワイヤレス ネットワークはどのように保護されますか。",
+  "choices": [
+   "A. フレーム内の改ざんを検出するための整合性チェック",
+   "B. ゼロデイネットワーク攻撃を検出して防止するための特殊な暗号方式",
+   "C. アクセスポイントとクライアントのみが理解できるようにデータを暗号化するアルゴリズム",
+   "D. 権限のないユーザーがネットワークにアクセスすることを防ぐポリシー"
+  ],
+  "figure": null
+ },
+ {
+  "qid": "CCNA-0196",
+  "theme": "wireless",
+  "type": "single",
+  "question": "ワイヤレス ネットワークの SSID の特徴は何ですか。",
+  "choices": [
+   "A. 権限のないユーザーを防ぐためにポリシーを使用する",
+   "B. WLAN 上のアクセス ポイントを識別する",
+   "C. ユーザーにログイン ID を要求する",
+   "D. WLAN に名前を関連付ける"
+  ],
+  "figure": null
+ },
+ {
+  "qid": "CCNA-0197",
+  "theme": "wireless",
+  "type": "single",
+  "question": "すべてのクライアント トラフィックをワイヤレス コントローラ経由で転送するようにアクセスポイントを構成する必要があります。このタスクを実行するには、どのモードを有効にしますか。",
+  "choices": [
+   "A. ローカル",
+   "B. モニター",
+   "C. 自律",
+   "D. 不正検出"
+  ],
+  "figure": null
+ },
+ {
+  "qid": "CCNA-0202",
+  "theme": "wireless",
+  "type": "single",
+  "question": "ESSID の目的は何ですか。",
+  "choices": [
+   "A. 標準的なSSIDよりも高いセキュリティを提供します。",
+   "B. 802.11 r、802.11k、802.11v などの高速ローミング機能をサポートしています。",
+   "C. アクセスポイントのワイヤレスMACアドレスとして機能します。",
+   "D. 複数のアクセスポイントがクライアント接続のために共通のネットワークを提供することを可能にします。"
+  ],
+  "figure": null
+ },
+ {
+  "qid": "CCNA-0204",
+  "theme": "wireless",
+  "type": "single",
+  "question": "無線ネットワークにおけるSSIDの特徴は何ですか？",
+  "choices": [
+   "A. スパイウェア対策",
+   "B. 無線LANコントローラの識別に使用される",
+   "C. 無線クライアントが特定のネットワークに接続できるようにする",
+   "D. アクセスポイントへの接続に使用するパスワード"
+  ],
+  "figure": null
+ },
+ {
+  "qid": "CCNA-0205",
+  "theme": "wireless",
+  "type": "single",
+  "question": "クライアントが同じSSID上のアクセスポイント間をローミングする場合、どの802.11管理フレームタイプが送信されますか。",
+  "choices": [
+   "A. 再関連付け要求",
+   "B. 認証要求",
+   "C. アソシエーション要求",
+   "D. プローブ要求"
+  ],
+  "figure": null
+ },
+ {
+  "qid": "CCNA-0207",
+  "theme": "wireless",
+  "type": "single",
+  "question": "エンジニアは、2.4GHz チャネルの使用率が高く、5GHz チャネルの使用率が低いことを観察しました。クライアントが 5GHz アクセス ポイントを優先的に使用できるようにするには、何を構成する必要がありますか。",
+  "choices": [
+   "A. クライアントの帯域選択",
+   "B. ローミングされたクライアントのリアンカー",
+   "C. OEAP スプリットトンネル",
+   "D. 11ac MU-MIMO"
+  ],
+  "figure": null
+ },
+ {
+  "qid": "CCNA-0212",
+  "theme": "wireless",
+  "type": "single",
+  "question": "SSID の目的は何ですか?",
+  "choices": [
+   "A. WLAN 上の個々のアクセス ポイントを識別します。",
+   "B. アクセス ポイントに入るトラフィックを区別します。",
+   "C. ネットワーク セキュリティを提供します。",
+   "D. WLAN を識別します。"
+  ],
+  "figure": null
+ },
+ {
+  "qid": "CCNA-0213",
+  "theme": "wireless",
+  "type": "single",
+  "question": "ワイヤレス ネットワークにおける SSID の特徴は何ですか?",
+  "choices": [
+   "A. WLAN 上のアクセス ポイントを識別します",
+   "B. パスワードを使用してアクセス ポイントに接続する",
+   "C. ポリシーを使用して無許可のユーザーを防止する",
+   "D. 大文字と小文字を区別するテキスト文字列を使用する"
+  ],
+  "figure": null
+ },
+ {
+  "qid": "CCNA-0274",
+  "theme": "wireless",
+  "type": "single",
+  "question": "WLCのディストリビューションポートに接続するスイッチのポートをトランクモードに設定する理由は何ですか。",
+  "choices": [
+   "A. データパスのリンク障害による冗長性を排除するため",
+   "B. データパスで複数の VLAN を使用できるようにするため",
+   "C. アウトオブバンド管理のリンク障害が発生した場合に冗長性を提供するため",
+   "D. 複数の VLAN がアウトオブバンド管理を提供できるようにするため"
+  ],
+  "figure": null
+ },
+ {
+  "qid": "CCNA-0275",
+  "theme": "wireless",
+  "type": "single",
+  "question": "SSID の仕様はどれですか。",
+  "choices": [
+   "A. Cisco 独自のセキュリティ機能です",
+   "B. 1つの数字と1つの文字を含める必要があります",
+   "C. スイッチ上の VLAN を定義します",
+   "D. 大文字と小文字が区別されます"
+  ],
+  "figure": null
+ },
+ {
+  "qid": "CCNA-0279",
+  "theme": "wireless",
+  "type": "multiple",
+  "question": "ワイヤレスネットワーク用に新しい WLAN を設定します。これらの要件を満たすアクションはどれですか。(2つ選択)\n・デュアルバンドクライアントは、5GHzに誘導される\n・ワイヤレスクライアントは、返された RADIUS属性でVLAN 設定を適用できる",
+  "choices": [
+   "A. Client Band Select オプションを有効にする",
+   "B. Coverage Hole Detection オプションを有効にする",
+   "C. Alloe AAA Override オプションを有効にする",
+   "D. MFP Client Protection オプションを必須に設定する",
+   "E. Aironet IE オプションを有効にする"
+  ],
+  "figure": null
+ },
+ {
+  "qid": "CCNA-0285",
+  "theme": "wireless",
+  "type": "single",
+  "question": "FlexConnectモードで動作しているAPに接続し、WLANがフレックスローカルスイッチングを使用している場合、どのスイッチポート構成を設定しますか？",
+  "choices": [
+   "A. 1つのVLANを持つアクセスポート",
+   "B. プルーニングされたVLANを持つトランクポート",
+   "C. IPアドレスを持つレイヤ3ポート",
+   "D. MACフィルタリングが有効になっているタグ付きポート"
+  ],
+  "figure": null
+ },
+ {
+  "qid": "CCNA-0289",
+  "theme": "wireless",
+  "type": "single",
+  "question": "AP とクライアント アクセスで使用される VLAN が異なる場合、ローカルでスイッチされる FlexConnect AP について何を考慮する必要がありますか。",
+  "choices": [
+   "A. AP は、LAG モードで複数のリンクを使用してスイッチに接続する必要がある。",
+   "B. ネイティブ VLAN は AP の管理 VLAN と一致する必要がある。",
+   "C. スイッチ ポート モードはトランクに設定する必要がある。",
+   "D. IEEE 802.1Q トランキングはスイッチ ポートで無効にする必要がある。"
+  ],
+  "figure": null
+ },
+ {
+  "qid": "CCNA-0295",
+  "theme": "wireless",
+  "type": "single",
+  "question": "アクセス ポイントがワイヤレス ネットワーク デバイスへのワイヤレス接続を確立および維持するために使用する一意の識別子はどれですか。",
+  "choices": [
+   "A. VLAN ID",
+   "B. SSID",
+   "C. RFID",
+   "D. WLAN ID"
+  ],
+  "figure": null
+ },
+ {
+  "qid": "CCNA-0317",
+  "theme": "wireless",
+  "type": "single",
+  "question": "LAG の使用時に WLC 上のどのインターフェースが 1 つに制限されますか。",
+  "choices": [
+   "A. APマネージャ",
+   "B. 仮想",
+   "C. トランク",
+   "D. サービス"
+  ],
+  "figure": null
+ },
+ {
+  "qid": "CCNA-0319",
+  "theme": "wireless",
+  "type": "single",
+  "question": "Cisco WLC に複数のディストリビューション システム ポートと 1 つの IP アドレスのみが設定されている場合に必要な標準はどれですか。",
+  "choices": [
+   "A. 802.3ad",
+   "B. 802.1q",
+   "C. 802.1d",
+   "D. 802.1af"
+  ],
+  "figure": null
+ },
+ {
+  "qid": "CCNA-0355",
+  "theme": "wireless",
+  "type": "single",
+  "question": "Cisco WLC（Wireless LAN Controller）の役割として誤っているものはどれか。",
+  "choices": [
+   "A. 複数のアクセスポイントを集中管理し、無線LAN設定の一元化を行う",
+   "B. DHCPアドレスの割り当てを行う",
+   "C. 有線ネットワークのスパニングツリーを管理する",
+   "D. DNSの名前解決を行う"
+  ],
+  "figure": null
+ },
+ {
+  "qid": "CCNA-0356",
+  "theme": "wireless",
+  "type": "single",
+  "question": "Cisco WLC（Wireless LAN Controller）の役割として誤っているものはどれか。",
+  "choices": [
+   "A. 複数のアクセスポイントを集中管理し、無線LAN設定の一元化を行う",
+   "B. 有線ネットワークのスパニングツリーを管理する",
+   "C. DHCPアドレスの割り当てを行う",
+   "D. DNSの名前解決を行う"
+  ],
+  "figure": null
+ },
+ {
+  "qid": "CCNA-0357",
+  "theme": "wireless",
+  "type": "single",
+  "question": "Cisco WLC（Wireless LAN Controller）の役割として誤っているものはどれか。",
+  "choices": [
+   "A. DHCPアドレスの割り当てを行う",
+   "B. 有線ネットワークのスパニングツリーを管理する",
+   "C. DNSの名前解決を行う",
+   "D. 複数のアクセスポイントを集中管理し、無線LAN設定の一元化を行う"
+  ],
+  "figure": null
+ },
+ {
+  "qid": "CCNA-0359",
+  "theme": "wireless",
+  "type": "single",
+  "question": "次の中から、cisco WLC（Wireless LAN Controller）の役割として最も適切なものはどれか。",
+  "choices": [
+   "A. DNSの名前解決を行う",
+   "B. 有線ネットワークのスパニングツリーを管理する",
+   "C. 複数のアクセスポイントを集中管理し、無線LAN設定の一元化を行う",
+   "D. DHCPアドレスの割り当てを行う"
+  ],
+  "figure": null
+ },
+ {
+  "qid": "CCNA-0371",
+  "theme": "wireless",
+  "type": "single",
+  "question": "自律 AP が 2つのVLAN を WLAN にマッピングする場合、有線ネットワークへの接続に使用されるポートのタイプはどれですか。",
+  "choices": [
+   "A. LAG",
+   "B. EtherChannel",
+   "C. trunk",
+   "D. access"
+  ],
+  "figure": null
+ },
+ {
+  "qid": "CCNA-0389",
+  "theme": "wireless",
+  "type": "single",
+  "question": "AP が FlexConnect モードの場合、スイッチ インターフェイスはどのように設定する必要がありますか。",
+  "choices": [
+   "A. アクセスポート",
+   "B. EtherChannel",
+   "C. PoE ポート",
+   "D. トランクポート"
+  ],
+  "figure": null
  },
  {
   "qid": "CCNA-0396",
@@ -6406,33 +6483,6 @@ window.SURVEY_QUESTIONS = [
   "figure": null
  },
  {
-  "qid": "CCNA-0437",
-  "theme": "wireless",
-  "type": "drag_drop",
-  "question": "コマンドを左側から右側の宛先インターフェイスにドラッグ アンド ドロップします。すべてのコマンドが使用されるわけではありません。",
-  "choices": [],
-  "figure": null,
-  "dnd": {
-   "items": [
-    "テンプレートを使用してQOS設定を実装する",
-    "Wi-Fi信号を強化する機能",
-    "PoE用の特別なアダプタが必要",
-    "デバイスグループ内のユーザー接続データを提供する",
-    "ワークグループブリッジとして構成可能"
-   ],
-   "targets": [
-    {
-     "label": "アクセスポイント",
-     "slots": 2
-    },
-    {
-     "label": "無線LANコントローラー",
-     "slots": 2
-    }
-   ]
-  }
- },
- {
   "qid": "CCNA-0438",
   "theme": "wireless",
   "type": "single",
@@ -6802,6 +6852,84 @@ window.SURVEY_QUESTIONS = [
   "figure": "data/figures/CCNA-0465.png"
  },
  {
+  "qid": "CCNA-0475",
+  "theme": "wireless",
+  "type": "exhibit_choice",
+  "question": "User1 と User2 に対して DHCP パケットと DNS パケットのみを許可するように WLC を設定する必要があります。どの設定を使用しますか。",
+  "choices": [
+   "A. レイヤ 2 セキュリティ設定で 802.1X 標準の Web 認証を有効にする",
+   "B. レイヤ 3 セキュリティ設定で MAC フィルタリングによるフォールバック ポリシーを有効にする",
+   "C. レイヤ 3 セキュリティ設定で Web ポリシーと認証を有効にする",
+   "D. WLAN の AAA サーバ設定で Web 認証を有効にする"
+  ],
+  "figure": "data/figures/CCNA-0475.png"
+ },
+ {
+  "qid": "CCNA-0478",
+  "theme": "wireless",
+  "type": "exhibit_choice",
+  "question": "Wi-Fi SSID「Office_WLan」にはレイヤー2セキュリティが設定されています。この構成によって何が決定されますか。",
+  "choices": [
+   "A. 強力な暗号化と認証を提供するガロアキャッシュアルゴリズムが設定されています。",
+   "B. x.509標準を使用して、NACとネットワーク・デバイス間で強力な相互認証が使用されています。",
+   "C. 既知のMACアドレスを持つ許可されたデバイスのみが、ネットワークに接続することを保証するセキュリティの追加レイヤーがある。",
+   "D. さまざまなレイヤー 2 およびレイヤー 3 攻撃から保護するために設定された堅牢なセキュリティ メカニズムがあります。"
+  ],
+  "figure": "data/figures/CCNA-0478.png"
+ },
+ {
+  "qid": "CCNA-0602",
+  "theme": "wireless",
+  "type": "single",
+  "question": "P2P Blocking Action オプションは 無効になっています。キャンパス内をクライアントが移動するときに、各クライアントが割り当てられた IP アドレスを保持するための設定はどれですか？",
+  "choices": [
+   "A. P2P Blocking ActionオプションをForward-Up Streamに設定する",
+   "B. Static IP Tunneling オプションを有効にする",
+   "C. DHCP Addr. Assignment チェックボックスをオンにする",
+   "D. Coverage Hole Detection オプションを無効にする"
+  ],
+  "figure": null
+ },
+ {
+  "qid": "CCNA-0736",
+  "theme": "wireless",
+  "type": "single",
+  "question": "ネットワークエンジニアが、認証サーバーの設定とダイナミックインターフェイスの作成によって、新しい無線LANの実装を開始します。基本設定を完了するには、次に何を実行しますか。",
+  "choices": [
+   "A. 管理インターフェイスをインストールし、管理IPを追加します。",
+   "B. アクセスポイントの高可用性と冗長性を設定します。",
+   "C. 管理インターフェイスでTelnetとRADIUSアクセスを有効にする。",
+   "D. 新しい WLAN を作成し、ダイナミックインターフェイスをそれにバインドします。"
+  ],
+  "figure": null
+ },
+ {
+  "qid": "CCNA-0740",
+  "theme": "wireless",
+  "type": "single",
+  "question": "ネットワーク エンジニアは、認証サーバーを構成し、動的インターフェイスを作成することで、新しい無線 LAN の実装を開始します。\n基本構成を完了するには、次に何を実行する必要がありますか。",
+  "choices": [
+   "A. 新しい WLAN を作成し、動的インターフェイスをそれにバインドする。",
+   "B. アクセス ポイントの高可用性と冗長性を構成する。",
+   "C. 管理インターフェイスで Telnet および RADIUS アクセスを有効する。",
+   "D. 管理インターフェイスをインストールし、管理 IP を追加する。"
+  ],
+  "figure": null
+ },
+ {
+  "qid": "CCNA-0922",
+  "theme": "wireless",
+  "type": "single",
+  "question": "新しいワイヤレス ネットワークを自律モードの AP で構成するか、クラウドベース モードで実行される AP で構成するかを決定する際に、ネットワーク管理者が考慮する必要があることは何ですか。",
+  "choices": [
+   "A. 自律モードの AP はアンダーレイへの依存度が低いが、クラウドベース モードの APよりも保守が複雑",
+   "B. 自律モードの AP はクラウドベース モードの AP よりも導入と自動化が簡単です",
+   "C. クラウドベース モードの AP は導入が簡単ですが、自律モードの AP よりも自動化が困難です",
+   "D. クラウドベース モードの AP はアンダーレイに依存しており、自律モードの AP よりも保守が複雑です"
+  ],
+  "figure": null
+ },
+ {
   "qid": "CCNA-0466",
   "theme": "wireless-security",
   "type": "single",
@@ -6920,19 +7048,6 @@ window.SURVEY_QUESTIONS = [
   "figure": null
  },
  {
-  "qid": "CCNA-0475",
-  "theme": "wireless-security",
-  "type": "exhibit_choice",
-  "question": "User1 と User2 に対して DHCP パケットと DNS パケットのみを許可するように WLC を設定する必要があります。どの設定を使用しますか。",
-  "choices": [
-   "A. レイヤ 2 セキュリティ設定で 802.1X 標準の Web 認証を有効にする",
-   "B. レイヤ 3 セキュリティ設定で MAC フィルタリングによるフォールバック ポリシーを有効にする",
-   "C. レイヤ 3 セキュリティ設定で Web ポリシーと認証を有効にする",
-   "D. WLAN の AAA サーバ設定で Web 認証を有効にする"
-  ],
-  "figure": "data/figures/CCNA-0475.png"
- },
- {
   "qid": "CCNA-0476",
   "theme": "wireless-security",
   "type": "multiple",
@@ -6959,19 +7074,6 @@ window.SURVEY_QUESTIONS = [
    "E. WPA2 Policy、 AES チェックボックスを選択する。"
   ],
   "figure": null
- },
- {
-  "qid": "CCNA-0478",
-  "theme": "wireless-security",
-  "type": "exhibit_choice",
-  "question": "Wi-Fi SSID「Office_WLan」にはレイヤー2セキュリティが設定されています。この構成によって何が決定されますか。",
-  "choices": [
-   "A. 強力な暗号化と認証を提供するガロアキャッシュアルゴリズムが設定されています。",
-   "B. x.509標準を使用して、NACとネットワーク・デバイス間で強力な相互認証が使用されています。",
-   "C. 既知のMACアドレスを持つ許可されたデバイスのみが、ネットワークに接続することを保証するセキュリティの追加レイヤーがある。",
-   "D. さまざまなレイヤー 2 およびレイヤー 3 攻撃から保護するために設定された堅牢なセキュリティ メカニズムがあります。"
-  ],
-  "figure": "data/figures/CCNA-0478.png"
  },
  {
   "qid": "CCNA-0479",
@@ -7236,6 +7338,84 @@ window.SURVEY_QUESTIONS = [
   "figure": "data/figures/CCNA-0498.png"
  },
  {
+  "qid": "CCNA-0816",
+  "theme": "wireless-security",
+  "type": "single",
+  "question": "WPA3 に実装された拡張機能とは何ですか。",
+  "choices": [
+   "A. アクセス ポイントを識別するために PKI と RADIUS を採用する",
+   "B. 802.1x 認証と AES-128 暗号化を適用する",
+   "C. TKIP とパケットごとのキーイングを使用する",
+   "D. 認証解除攻撃と関連付け解除攻撃から防御する"
+  ],
+  "figure": null
+ },
+ {
+  "qid": "CCNA-0822",
+  "theme": "wireless-security",
+  "type": "single",
+  "question": "事前に設定された秘密鍵とSSIDを使用し、セキュリティ保護された鍵ハッシュアルゴリズムを設定する必要があります。ユーザー認証方法としてAAAサーバーを使用しないでください。このタスクを完了するには、どのアクションを実行すればよいですか。",
+  "choices": [
+   "A. PSK-SHA2を設定します",
+   "B. キー文字列を使用してPSKフォーマットをHEXに設定します",
+   "C. CCMP128(AES)を設定します",
+   "D. AutoConfig iPSKを有効にします"
+  ],
+  "figure": null
+ },
+ {
+  "qid": "CCNA-0827",
+  "theme": "wireless-security",
+  "type": "single",
+  "question": "WPA3 に実装された拡張機能とは何ですか。",
+  "choices": [
+   "A. 802.1x 認証と AES-128 暗号化を適用する。",
+   "B. PKI と RADIUS を使用してアクセス ポイントを識別する",
+   "C. TKIP とパケットごとのキーイングを使用する",
+   "D. 認証解除および関連付け解除攻撃を防御する"
+  ],
+  "figure": null
+ },
+ {
+  "qid": "CCNA-0832",
+  "theme": "wireless-security",
+  "type": "single",
+  "question": "WPA3-Personalが使用する認証方式はどれか。",
+  "choices": [
+   "A. PSK（Pre-Shared Key）",
+   "B. SAE（Simultaneous Authentication of Equals）",
+   "C. 802.1X",
+   "D. TACACS+"
+  ],
+  "figure": null
+ },
+ {
+  "qid": "CCNA-0844",
+  "theme": "wireless-security",
+  "type": "single",
+  "question": "WPA3-SAEを使用したSSIDはワイヤレスクライアントによって使用されている間、どのような機能を持つか。",
+  "choices": [
+   "A. エアスニッフィング攻撃に対するネットワークセキュリティを低下させ、複雑なパスワードの使用を抑制します。",
+   "B. オフライン辞書攻撃に対するネットワークセキュリティを向上させ、時間のかかる総当たり攻撃を抑制します。",
+   "C. 中間者攻撃に対するネットワーク・セキュリティを高め、サービス拒否攻撃を抑制する。",
+   "D. オフライン辞書攻撃に対するネットワークセキュリティを低下させ、ネットワークへの容易なアクセスを促す。"
+  ],
+  "figure": null
+ },
+ {
+  "qid": "CCNA-0863",
+  "theme": "wireless-security",
+  "type": "single",
+  "question": "WPA3が従来よりも高度なセキュリティを提供できる仕組みはどれか。",
+  "choices": [
+   "A. 自動デバイスペアリング",
+   "B. 共有鍵における特殊文字のサポート",
+   "C. 証明書ベースの認証",
+   "D. SAE パスワードベースの鍵交換"
+  ],
+  "figure": null
+ },
+ {
   "qid": "CCNA-0499",
   "theme": "routing",
   "type": "exhibit_choice",
@@ -7377,19 +7557,6 @@ window.SURVEY_QUESTIONS = [
    "D. 172.16.9.5と172.16.4.4経由のトラフィックを負荷分散します。"
   ],
   "figure": "data/figures/CCNA-0509.png"
- },
- {
-  "qid": "CCNA-0510",
-  "theme": "routing",
-  "type": "single",
-  "question": "IP ルーティング テーブルの内容を表示するために、route print コマンドの代わりに使用される Windows コマンドはどれですか。",
-  "choices": [
-   "A. netstat-n",
-   "B. ipconfig",
-   "C. ifconfig",
-   "D. netstat-r"
-  ],
-  "figure": null
  },
  {
   "qid": "CCNA-0511",
@@ -8643,19 +8810,6 @@ window.SURVEY_QUESTIONS = [
   "figure": "data/figures/CCNA-0595.png"
  },
  {
-  "qid": "CCNA-0596",
-  "theme": "ospf",
-  "type": "single",
-  "question": "ファーストホップ冗長プロトコルの実装により、ネットワーク上で何が保護されますか。",
-  "choices": [
-   "A. BGPネイバーフラッピング",
-   "B. デフォルトゲートウェイ障害",
-   "C. ルートブリッジ損失",
-   "D. スパニングツリーループ"
-  ],
-  "figure": null
- },
- {
   "qid": "CCNA-0597",
   "theme": "ospf",
   "type": "single",
@@ -8717,19 +8871,6 @@ window.SURVEY_QUESTIONS = [
    "B. R14#\ninterface Loopback0\nip ospf 10 area 0\n\ninterface FastEthernet0/0\nip address 10.73.65.65 255.255.255.252\nip ospf priority 255\nip ospf 10 area 0\nip mtu 1500\n\nrouter ospf 10\nrouter-id 10.10.1.14\n\nR86#\ninterface Loopback0\nip ospf 10 area 0\n\ninterface FastEthernet0/0\nip address 10.73.65.66 255.255.255.252\nip ospf 10 area 0\nip mtu 1500\n\nrouter ospf 10\nrouter-id 10.10.1.86"
   ],
   "figure": "data/figures/CCNA-0601.png"
- },
- {
-  "qid": "CCNA-0602",
-  "theme": "ospf",
-  "type": "single",
-  "question": "P2P Blocking Action オプションは 無効になっています。キャンパス内をクライアントが移動するときに、各クライアントが割り当てられた IP アドレスを保持するための設定はどれですか？",
-  "choices": [
-   "A. P2P Blocking ActionオプションをForward-Up Streamに設定する",
-   "B. Static IP Tunneling オプションを有効にする",
-   "C. DHCP Addr. Assignment チェックボックスをオンにする",
-   "D. Coverage Hole Detection オプションを無効にする"
-  ],
-  "figure": null
  },
  {
   "qid": "CCNA-0603",
@@ -8837,19 +8978,6 @@ window.SURVEY_QUESTIONS = [
   "figure": "data/figures/CCNA-0610.png"
  },
  {
-  "qid": "CCNA-0611",
-  "theme": "ospf",
-  "type": "single",
-  "question": "ネットワーク管理者は、64 ビット アドレス 2001:0EB8:00C1:2200:0001:0000:0000:0331/64 を使用して、新しい IPv6 ネットワークを設定しています。構成を簡素化するために、管理者はアドレスを圧縮することにしました。管理者はどの IP アドレスを設定する必要がありますか。",
-  "choices": [
-   "A. ipv6 address 2001:EB8:C1:22:1::331/64",
-   "B. ipv6 address 21:EB8:C1:2200:1::331/64",
-   "C. ipv6 address 2001:EB8:C1:2200:1:0000:331/64",
-   "D. ipv6 address 2001:EB8:C1:2200:1::331/64"
-  ],
-  "figure": null
- },
- {
   "qid": "CCNA-0612",
   "theme": "ospf",
   "type": "multiple",
@@ -8891,32 +9019,6 @@ window.SURVEY_QUESTIONS = [
   "figure": "data/figures/CCNA-0614.png"
  },
  {
-  "qid": "CCNA-0615",
-  "theme": "ospf",
-  "type": "single",
-  "question": "ネットワーク攻撃が、ターゲットのハーフオープン TCP リソースが使い果たされるまでポートに複数のパケットを送信することによってターゲット サーバーを圧倒する場合、どのタイプの攻撃ですか。",
-  "choices": [
-   "A. SYN フラッド攻撃",
-   "B. リフレクション攻撃",
-   "C. Teardrop攻撃",
-   "D. 増幅攻撃"
-  ],
-  "figure": null
- },
- {
-  "qid": "CCNA-0616",
-  "theme": "ospf",
-  "type": "single",
-  "question": "First Hop Redundancy Protocol（FHRP）の例として誤っているものはどれか。",
-  "choices": [
-   "A. STP",
-   "B. LACP",
-   "C. OSPF",
-   "D. HSRP"
-  ],
-  "figure": null
- },
- {
   "qid": "CCNA-0617",
   "theme": "ospf",
   "type": "single",
@@ -8952,19 +9054,6 @@ window.SURVEY_QUESTIONS = [
    "B. Down → Init → 2-Way → ExStart → Exchange → Loading → Full",
    "C. Down → 2-Way → Init → Exchange → ExStart → Loading → Full",
    "D. Down → Init → Exchange → 2-Way → Loading → Full"
-  ],
-  "figure": null
- },
- {
-  "qid": "CCNA-0620",
-  "theme": "ospf",
-  "type": "single",
-  "question": "First Hop Redundancy Protocol（FHRP）の例として適切な説明を1つ選びなさい。",
-  "choices": [
-   "A. STP",
-   "B. OSPF",
-   "C. LACP",
-   "D. HSRP"
   ],
   "figure": null
  },
@@ -9034,19 +9123,6 @@ window.SURVEY_QUESTIONS = [
   "figure": null
  },
  {
-  "qid": "CCNA-0626",
-  "theme": "ospf",
-  "type": "single",
-  "question": "First Hop Redundancy Protocol（FHRP）の例として誤っているものはどれか。",
-  "choices": [
-   "A. HSRP",
-   "B. STP",
-   "C. LACP",
-   "D. OSPF"
-  ],
-  "figure": null
- },
- {
   "qid": "CCNA-0627",
   "theme": "ospf",
   "type": "single",
@@ -9084,6 +9160,58 @@ window.SURVEY_QUESTIONS = [
    "D. R4"
   ],
   "figure": "data/figures/CCNA-0629.png"
+ },
+ {
+  "qid": "CCNA-0596",
+  "theme": "fhrp",
+  "type": "single",
+  "question": "ファーストホップ冗長プロトコルの実装により、ネットワーク上で何が保護されますか。",
+  "choices": [
+   "A. BGPネイバーフラッピング",
+   "B. デフォルトゲートウェイ障害",
+   "C. ルートブリッジ損失",
+   "D. スパニングツリーループ"
+  ],
+  "figure": null
+ },
+ {
+  "qid": "CCNA-0616",
+  "theme": "fhrp",
+  "type": "single",
+  "question": "First Hop Redundancy Protocol（FHRP）の例として誤っているものはどれか。",
+  "choices": [
+   "A. STP",
+   "B. LACP",
+   "C. OSPF",
+   "D. HSRP"
+  ],
+  "figure": null
+ },
+ {
+  "qid": "CCNA-0620",
+  "theme": "fhrp",
+  "type": "single",
+  "question": "First Hop Redundancy Protocol（FHRP）の例として適切な説明を1つ選びなさい。",
+  "choices": [
+   "A. STP",
+   "B. OSPF",
+   "C. LACP",
+   "D. HSRP"
+  ],
+  "figure": null
+ },
+ {
+  "qid": "CCNA-0626",
+  "theme": "fhrp",
+  "type": "single",
+  "question": "First Hop Redundancy Protocol（FHRP）の例として誤っているものはどれか。",
+  "choices": [
+   "A. HSRP",
+   "B. STP",
+   "C. LACP",
+   "D. OSPF"
+  ],
+  "figure": null
  },
  {
   "qid": "CCNA-0630",
@@ -9267,6 +9395,34 @@ window.SURVEY_QUESTIONS = [
    "B. シスコ独自のファーストホップ冗長プロトコルを使用する",
    "C. ルーター間の通信に宛先 IP アドレス 224.0.0.102 を使用する",
    "D. 動的 IP アドレス割り当てを使用する"
+  ],
+  "figure": null
+ },
+ {
+  "qid": "CCNA-0203",
+  "theme": "ip-services",
+  "type": "multiple",
+  "question": "DHCP サーバーの 2 つの機能は何ですか。(2つ選択)",
+  "choices": [
+   "A. 集中 IP 管理をサポートする",
+   "B. ネットワークに追加されたときに DHCP DISCOVER メッセージを発行する",
+   "C. IP アドレスを発行してクライアントの DHCP OFFER 要求に応答する",
+   "D. ユーザーが独自の IP アドレスをホストに割り当てることを防ぐ",
+   "E. ネットワーク内のホストに動的 IP 構成を割り当てる"
+  ],
+  "figure": null
+ },
+ {
+  "qid": "CCNA-0214",
+  "theme": "ip-services",
+  "type": "multiple",
+  "question": "DHCP サーバーの 2 つの機能は何ですか? (2 つお選びください。)",
+  "choices": [
+   "A. ネットワークに追加されたときに DHCPDISCOVER メッセージを発行する",
+   "B. IP アドレスを発行してクライアントの DHCPOFFER 要求に応答する",
+   "C. 一元的な IP 管理をサポートする",
+   "D. ネットワーク内のホストに動的 IP 構成を割り当てる",
+   "E. ユーザーが自分の IP アドレスをホストに割り当てることを防止する"
   ],
   "figure": null
  },
@@ -10002,19 +10158,6 @@ window.SURVEY_QUESTIONS = [
   "figure": null
  },
  {
-  "qid": "CCNA-0690",
-  "theme": "monitoring-qos",
-  "type": "single",
-  "question": "自動化は、データモデルをどのように活用して管理対象ネットワークの運用複雑性を軽減しますか。",
-  "choices": [
-   "A. 多くのインターフェースを持つデバイスに対する特定の要求への応答時間を短縮する",
-   "B. コントローラーがベンダーに依存しないようにする",
-   "C. トラフィックを分類し、洞察を提供する",
-   "D. SNMPやその他のポーリングツールを使用して監視を効率化する"
-  ],
-  "figure": null
- },
- {
   "qid": "CCNA-0691",
   "theme": "monitoring-qos",
   "type": "single",
@@ -10199,19 +10342,6 @@ window.SURVEY_QUESTIONS = [
   "figure": null
  },
  {
-  "qid": "CCNA-0705",
-  "theme": "monitoring-qos",
-  "type": "single",
-  "question": "認証と認可の違いは次のうちどれですか。",
-  "choices": [
-   "A. 認証はユーザーがアクセスするリソースを記録するために使用され、認可はユーザーがアクセスできるリソースを決定するために使用される。",
-   "B. 認証はネットワークにアクセスする人の身元を確認し、認可はユーザーがアクセスできるリソースを決定する。",
-   "C. 認証は、ユーザーがどのリソースにアクセスできるかを決定するために使用され、認可は、どの機器がネットワークへのアクセスを許可されているかを追跡するために使用される。",
-   "D. 認証は個人の身元を確認するために使用され、承認はログイン用の syslog メッセージを作成するために使用される。"
-  ],
-  "figure": null
- },
- {
   "qid": "CCNA-0706",
   "theme": "monitoring-qos",
   "type": "single",
@@ -10312,19 +10442,6 @@ window.SURVEY_QUESTIONS = [
    "B. サービスタイプ",
    "C. DSCP",
    "D. ECN"
-  ],
-  "figure": null
- },
- {
-  "qid": "CCNA-0714",
-  "theme": "monitoring-qos",
-  "type": "single",
-  "question": "スイッチ上で MAC 学習はどのように機能しますか。",
-  "choices": [
-   "A. キューイングせずにすべてのポートにフレームをブロードキャストする",
-   "B. 不明な送信元 MAC アドレスをアドレス テーブルに追加する",
-   "C. 新しいフレームを受信すると再送信要求を送信する",
-   "D. 宛先が不明なフレームをマルチキャスト グループに送信する"
   ],
   "figure": null
  },
@@ -10669,19 +10786,6 @@ window.SURVEY_QUESTIONS = [
   "figure": null
  },
  {
-  "qid": "CCNA-0736",
-  "theme": "device-access",
-  "type": "single",
-  "question": "ネットワークエンジニアが、認証サーバーの設定とダイナミックインターフェイスの作成によって、新しい無線LANの実装を開始します。基本設定を完了するには、次に何を実行しますか。",
-  "choices": [
-   "A. 管理インターフェイスをインストールし、管理IPを追加します。",
-   "B. アクセスポイントの高可用性と冗長性を設定します。",
-   "C. 管理インターフェイスでTelnetとRADIUSアクセスを有効にする。",
-   "D. 新しい WLAN を作成し、ダイナミックインターフェイスをそれにバインドします。"
-  ],
-  "figure": null
- },
- {
   "qid": "CCNA-0737",
   "theme": "device-access",
   "type": "single",
@@ -10718,19 +10822,6 @@ window.SURVEY_QUESTIONS = [
    "C. TACACS+",
    "D. SSH",
    "E. RADIUS"
-  ],
-  "figure": null
- },
- {
-  "qid": "CCNA-0740",
-  "theme": "device-access",
-  "type": "single",
-  "question": "ネットワーク エンジニアは、認証サーバーを構成し、動的インターフェイスを作成することで、新しい無線 LAN の実装を開始します。\n基本構成を完了するには、次に何を実行する必要がありますか。",
-  "choices": [
-   "A. 新しい WLAN を作成し、動的インターフェイスをそれにバインドする。",
-   "B. アクセス ポイントの高可用性と冗長性を構成する。",
-   "C. 管理インターフェイスで Telnet および RADIUS アクセスを有効する。",
-   "D. 管理インターフェイスをインストールし、管理 IP を追加する。"
   ],
   "figure": null
  },
@@ -10957,19 +11048,6 @@ window.SURVEY_QUESTIONS = [
   "figure": null
  },
  {
-  "qid": "CCNA-0758",
-  "theme": "device-access",
-  "type": "single",
-  "question": "Web サーバーによって実行される機能とは何ですか。",
-  "choices": [
-   "A. クライアントデバイスから電子メールを送受信する",
-   "B. FTP アクセス用にファイルを安全に保存する",
-   "C. ユーザーのアイデンティティを認証および認可する",
-   "D. HTTP 経由で送信されるアプリケーションを提供する"
-  ],
-  "figure": null
- },
- {
   "qid": "CCNA-0759",
   "theme": "device-access",
   "type": "single",
@@ -11126,6 +11204,19 @@ window.SURVEY_QUESTIONS = [
   "figure": "data/figures/CCNA-0770.png"
  },
  {
+  "qid": "CCNA-0779",
+  "theme": "device-access",
+  "type": "single",
+  "question": "Cisco IOSデバイスでSSHを有効にするために必要な設定はどれか。",
+  "choices": [
+   "A. ACLの設定のみ",
+   "B. OSPFの有効化",
+   "C. NATの設定",
+   "D. ホスト名とドメイン名の設定、RSA鍵の生成"
+  ],
+  "figure": null
+ },
+ {
   "qid": "CCNA-0771",
   "theme": "acl-l2security",
   "type": "single",
@@ -11227,19 +11318,6 @@ window.SURVEY_QUESTIONS = [
    "B. 送信元と宛先の両方のIPアドレスに基づいてフィルタリングを行う",
    "C. 送信元IPアドレスのみに基づいてフィルタリングを行う",
    "D. レイヤ4のポート番号に基づいてフィルタリングを行う"
-  ],
-  "figure": null
- },
- {
-  "qid": "CCNA-0779",
-  "theme": "acl-l2security",
-  "type": "single",
-  "question": "Cisco IOSデバイスでSSHを有効にするために必要な設定はどれか。",
-  "choices": [
-   "A. ACLの設定のみ",
-   "B. OSPFの有効化",
-   "C. NATの設定",
-   "D. ホスト名とドメイン名の設定、RSA鍵の生成"
   ],
   "figure": null
  },
@@ -11683,6 +11761,19 @@ window.SURVEY_QUESTIONS = [
   "figure": null
  },
  {
+  "qid": "CCNA-0705",
+  "theme": "aaa",
+  "type": "single",
+  "question": "認証と認可の違いは次のうちどれですか。",
+  "choices": [
+   "A. 認証はユーザーがアクセスするリソースを記録するために使用され、認可はユーザーがアクセスできるリソースを決定するために使用される。",
+   "B. 認証はネットワークにアクセスする人の身元を確認し、認可はユーザーがアクセスできるリソースを決定する。",
+   "C. 認証は、ユーザーがどのリソースにアクセスできるかを決定するために使用され、認可は、どの機器がネットワークへのアクセスを許可されているかを追跡するために使用される。",
+   "D. 認証は個人の身元を確認するために使用され、承認はログイン用の syslog メッセージを作成するために使用される。"
+  ],
+  "figure": null
+ },
+ {
   "qid": "CCNA-0810",
   "theme": "aaa",
   "type": "drag_drop",
@@ -11829,19 +11920,6 @@ window.SURVEY_QUESTIONS = [
   }
  },
  {
-  "qid": "CCNA-0816",
-  "theme": "aaa",
-  "type": "single",
-  "question": "WPA3 に実装された拡張機能とは何ですか。",
-  "choices": [
-   "A. アクセス ポイントを識別するために PKI と RADIUS を採用する",
-   "B. 802.1x 認証と AES-128 暗号化を適用する",
-   "C. TKIP とパケットごとのキーイングを使用する",
-   "D. 認証解除攻撃と関連付け解除攻撃から防御する"
-  ],
-  "figure": null
- },
- {
   "qid": "CCNA-0817",
   "theme": "aaa",
   "type": "drag_drop",
@@ -11937,19 +12015,6 @@ window.SURVEY_QUESTIONS = [
   "figure": null
  },
  {
-  "qid": "CCNA-0822",
-  "theme": "aaa",
-  "type": "single",
-  "question": "事前に設定された秘密鍵とSSIDを使用し、セキュリティ保護された鍵ハッシュアルゴリズムを設定する必要があります。ユーザー認証方法としてAAAサーバーを使用しないでください。このタスクを完了するには、どのアクションを実行すればよいですか。",
-  "choices": [
-   "A. PSK-SHA2を設定します",
-   "B. キー文字列を使用してPSKフォーマットをHEXに設定します",
-   "C. CCMP128(AES)を設定します",
-   "D. AutoConfig iPSKを有効にします"
-  ],
-  "figure": null
- },
- {
   "qid": "CCNA-0823",
   "theme": "aaa",
   "type": "multiple",
@@ -11977,19 +12042,6 @@ window.SURVEY_QUESTIONS = [
   "figure": null
  },
  {
-  "qid": "CCNA-0825",
-  "theme": "aaa",
-  "type": "single",
-  "question": "次世代IPSの機能とは何ですか。",
-  "choices": [
-   "A. ユーザーアクティビティとネットワークイベントを相関させる",
-   "B. コントローラーベースのネットワーク内でコントローラーとして機能する",
-   "C. RADIUS サーバーと統合して、レイヤー 2 デバイス認証ルールを適用する。",
-   "D. 学習した MAC アドレスに基づいて転送を決定する。"
-  ],
-  "figure": null
- },
- {
   "qid": "CCNA-0826",
   "theme": "aaa",
   "type": "single",
@@ -11999,19 +12051,6 @@ window.SURVEY_QUESTIONS = [
    "B. 認証",
    "C. アカウンティング",
    "D. 機密性"
-  ],
-  "figure": null
- },
- {
-  "qid": "CCNA-0827",
-  "theme": "aaa",
-  "type": "single",
-  "question": "WPA3 に実装された拡張機能とは何ですか。",
-  "choices": [
-   "A. 802.1x 認証と AES-128 暗号化を適用する。",
-   "B. PKI と RADIUS を使用してアクセス ポイントを識別する",
-   "C. TKIP とパケットごとのキーイングを使用する",
-   "D. 認証解除および関連付け解除攻撃を防御する"
   ],
   "figure": null
  },
@@ -12064,19 +12103,6 @@ window.SURVEY_QUESTIONS = [
    "B. Authorization（認可）、Access（アクセス）、Accounting（課金記録）",
    "C. Authentication（認証）、Access（アクセス）、Audit（監査）",
    "D. Authentication（認証）、Authorization（認可）、Accounting（課金記録）"
-  ],
-  "figure": null
- },
- {
-  "qid": "CCNA-0832",
-  "theme": "aaa",
-  "type": "single",
-  "question": "WPA3-Personalが使用する認証方式はどれか。",
-  "choices": [
-   "A. PSK（Pre-Shared Key）",
-   "B. SAE（Simultaneous Authentication of Equals）",
-   "C. 802.1X",
-   "D. TACACS+"
   ],
   "figure": null
  },
@@ -12202,15 +12228,15 @@ window.SURVEY_QUESTIONS = [
   }
  },
  {
-  "qid": "CCNA-0840",
-  "theme": "aaa",
+  "qid": "CCNA-0615",
+  "theme": "security-vpn",
   "type": "single",
-  "question": "次世代 IPS の機能とは何ですか？",
+  "question": "ネットワーク攻撃が、ターゲットのハーフオープン TCP リソースが使い果たされるまでポートに複数のパケットを送信することによってターゲット サーバーを圧倒する場合、どのタイプの攻撃ですか。",
   "choices": [
-   "A. ネットワーク内で観察された脆弱性を分析し、軽減します。",
-   "B. コントローラーベースのネットワーク内でコントローラーとして機能します。",
-   "C. RADIUS サーバーと統合して、レイヤー 2 デバイス認証ルールを適用します。",
-   "D. 学習した MAC アドレスに基づいて転送を決定します 。"
+   "A. SYN フラッド攻撃",
+   "B. リフレクション攻撃",
+   "C. Teardrop攻撃",
+   "D. 増幅攻撃"
   ],
   "figure": null
  },
@@ -12250,19 +12276,6 @@ window.SURVEY_QUESTIONS = [
    "B. 電子メールシステムのパッチ",
    "C. すべての PC でソフトウェアファイアウォールを有効にする",
    "D. 物理的なアクセス制御"
-  ],
-  "figure": null
- },
- {
-  "qid": "CCNA-0844",
-  "theme": "security-vpn",
-  "type": "single",
-  "question": "WPA3-SAEを使用したSSIDはワイヤレスクライアントによって使用されている間、どのような機能を持つか。",
-  "choices": [
-   "A. エアスニッフィング攻撃に対するネットワークセキュリティを低下させ、複雑なパスワードの使用を抑制します。",
-   "B. オフライン辞書攻撃に対するネットワークセキュリティを向上させ、時間のかかる総当たり攻撃を抑制します。",
-   "C. 中間者攻撃に対するネットワーク・セキュリティを高め、サービス拒否攻撃を抑制する。",
-   "D. オフライン辞書攻撃に対するネットワークセキュリティを低下させ、ネットワークへの容易なアクセスを促す。"
   ],
   "figure": null
  },
@@ -12440,32 +12453,6 @@ window.SURVEY_QUESTIONS = [
   "figure": null
  },
  {
-  "qid": "CCNA-0858",
-  "theme": "security-vpn",
-  "type": "single",
-  "question": "自動化されたネットワーク管理アプローチを実装する理由は何ですか。",
-  "choices": [
-   "A. ネットワーク構成の不整合を削減します",
-   "B. 定期的な管理コストが増加します",
-   "C. 「ボックス単位」の構成と展開を可能にします",
-   "D. 単純なパスワード ポリシーを解読します"
-  ],
-  "figure": null
- },
- {
-  "qid": "CCNA-0859",
-  "theme": "security-vpn",
-  "type": "single",
-  "question": "管理者が自動化されたネットワーク管理ソリューションの実装を選択するのはなぜでしょうか。",
-  "choices": [
-   "A. ボックスごとの構成と展開を可能にするため",
-   "B. 定期的な管理コストを制限するため",
-   "C. 運用コストを削減するため",
-   "D. よりシンプルなパスワード ポリシーをサポートするため"
-  ],
-  "figure": null
- },
- {
   "qid": "CCNA-0860",
   "theme": "security-vpn",
   "type": "single",
@@ -12505,19 +12492,6 @@ window.SURVEY_QUESTIONS = [
   "figure": null
  },
  {
-  "qid": "CCNA-0863",
-  "theme": "security-vpn",
-  "type": "single",
-  "question": "WPA3が従来よりも高度なセキュリティを提供できる仕組みはどれか。",
-  "choices": [
-   "A. 自動デバイスペアリング",
-   "B. 共有鍵における特殊文字のサポート",
-   "C. 証明書ベースの認証",
-   "D. SAE パスワードベースの鍵交換"
-  ],
-  "figure": null
- },
- {
   "qid": "CCNA-0864",
   "theme": "security-vpn",
   "type": "single",
@@ -12540,19 +12514,6 @@ window.SURVEY_QUESTIONS = [
    "B. 2つの異なる認証ソースを使用する多要素認証",
    "C. ACL を使用して、受信する Telnet セッションを「admin」アカウントに制限する。",
    "D. 既知の攻撃ベクトルのブロックリストを持つIPS"
-  ],
-  "figure": null
- },
- {
-  "qid": "CCNA-0866",
-  "theme": "security-vpn",
-  "type": "single",
-  "question": "機械学習はネットワークセキュリティにどのような利点をもたらしますか。",
-  "choices": [
-   "A. リアルタイムの脅威検出を改善します",
-   "B. ファイアウォールのルール セットを管理します",
-   "C. パスワードの複雑さの要件を適用します",
-   "D. VPN アクセス権限を制御します"
   ],
   "figure": null
  },
@@ -12895,6 +12856,84 @@ window.SURVEY_QUESTIONS = [
    "B. ネットワーク ノード間でトラフィックを安全に送信するための GRE トンネルを提供します。",
    "C. ピア間の一連のセキュリティ アソシエーションを有効にします。",
    "D. TFTP を利用して、ネットワーク上のピア間で安全なファイル転送を提供します。"
+  ],
+  "figure": null
+ },
+ {
+  "qid": "CCNA-0286",
+  "theme": "automation",
+  "type": "single",
+  "question": "異なるファブリック内の 2 つのエッジ ノード間にトンネルを提供するためにソフトウェア デファインド アクセス (SDA) で使用されるプロトコルはどれですか。",
+  "choices": [
+   "A. GRE",
+   "B. VLAN",
+   "C. VXLAN",
+   "D. PPP"
+  ],
+  "figure": null
+ },
+ {
+  "qid": "CCNA-0331",
+  "theme": "automation",
+  "type": "single",
+  "question": "企業が社内でネットワーク自動化を選択する理由は何ですか。",
+  "choices": [
+   "A. データサービスをより速く提供する",
+   "B. ネットワークのセグメンテーションを可能にする",
+   "C. スパニングツリーのループ回避を緩和する",
+   "D. きめ細かいQoSを実装する"
+  ],
+  "figure": null
+ },
+ {
+  "qid": "CCNA-0690",
+  "theme": "automation",
+  "type": "single",
+  "question": "自動化は、データモデルをどのように活用して管理対象ネットワークの運用複雑性を軽減しますか。",
+  "choices": [
+   "A. 多くのインターフェースを持つデバイスに対する特定の要求への応答時間を短縮する",
+   "B. コントローラーがベンダーに依存しないようにする",
+   "C. トラフィックを分類し、洞察を提供する",
+   "D. SNMPやその他のポーリングツールを使用して監視を効率化する"
+  ],
+  "figure": null
+ },
+ {
+  "qid": "CCNA-0858",
+  "theme": "automation",
+  "type": "single",
+  "question": "自動化されたネットワーク管理アプローチを実装する理由は何ですか。",
+  "choices": [
+   "A. ネットワーク構成の不整合を削減します",
+   "B. 定期的な管理コストが増加します",
+   "C. 「ボックス単位」の構成と展開を可能にします",
+   "D. 単純なパスワード ポリシーを解読します"
+  ],
+  "figure": null
+ },
+ {
+  "qid": "CCNA-0859",
+  "theme": "automation",
+  "type": "single",
+  "question": "管理者が自動化されたネットワーク管理ソリューションの実装を選択するのはなぜでしょうか。",
+  "choices": [
+   "A. ボックスごとの構成と展開を可能にするため",
+   "B. 定期的な管理コストを制限するため",
+   "C. 運用コストを削減するため",
+   "D. よりシンプルなパスワード ポリシーをサポートするため"
+  ],
+  "figure": null
+ },
+ {
+  "qid": "CCNA-0866",
+  "theme": "automation",
+  "type": "single",
+  "question": "機械学習はネットワークセキュリティにどのような利点をもたらしますか。",
+  "choices": [
+   "A. リアルタイムの脅威検出を改善します",
+   "B. ファイアウォールのルール セットを管理します",
+   "C. パスワードの複雑さの要件を適用します",
+   "D. VPN アクセス権限を制御します"
   ],
   "figure": null
  },
@@ -13364,19 +13403,6 @@ window.SURVEY_QUESTIONS = [
    "B. パケット処理ポリシーの管理",
    "C. パケットの転送",
    "D. パケットの断片化と再構成"
-  ],
-  "figure": null
- },
- {
-  "qid": "CCNA-0922",
-  "theme": "automation",
-  "type": "single",
-  "question": "新しいワイヤレス ネットワークを自律モードの AP で構成するか、クラウドベース モードで実行される AP で構成するかを決定する際に、ネットワーク管理者が考慮する必要があることは何ですか。",
-  "choices": [
-   "A. 自律モードの AP はアンダーレイへの依存度が低いが、クラウドベース モードの APよりも保守が複雑",
-   "B. 自律モードの AP はクラウドベース モードの AP よりも導入と自動化が簡単です",
-   "C. クラウドベース モードの AP は導入が簡単ですが、自律モードの AP よりも自動化が困難です",
-   "D. クラウドベース モードの AP はアンダーレイに依存しており、自律モードの AP よりも保守が複雑です"
   ],
   "figure": null
  },
@@ -13861,19 +13887,6 @@ window.SURVEY_QUESTIONS = [
   "figure": null
  },
  {
-  "qid": "CCNA-0957",
-  "theme": "automation",
-  "type": "single",
-  "question": "企業ネットワーク上のファイアウォールの機能は何ですか。",
-  "choices": [
-   "A. 企業とISPの間の仲介装置として機能する。",
-   "B. インターネット上のホストへのデフォルトゲートウェイとして機能する。",
-   "C. ステートレス・インスペクションに基づいてトラフィックを処理する",
-   "D. イングレスとイグレスのトラフィックを許可したり拒否したりする"
-  ],
-  "figure": null
- },
- {
   "qid": "CCNA-0958",
   "theme": "automation",
   "type": "drag_drop",
@@ -14106,19 +14119,6 @@ window.SURVEY_QUESTIONS = [
    "B. DELETE",
    "C. PUT",
    "D. GET"
-  ],
-  "figure": null
- },
- {
-  "qid": "CCNA-0974",
-  "theme": "automation",
-  "type": "single",
-  "question": "企業ネットワーク上のファイアウォールの機能は何ですか?",
-  "choices": [
-   "A. 入力トラフィックと出力トラフィックを許可および拒否します。",
-   "B. インターネット上のホストへのデフォルト ゲートウェイとして機能します。",
-   "C. ステートレス検査に基づいてトラフィックを処理します。",
-   "D. 企業とその ISP の間の仲介デバイスとして機能します。"
   ],
   "figure": null
  },
